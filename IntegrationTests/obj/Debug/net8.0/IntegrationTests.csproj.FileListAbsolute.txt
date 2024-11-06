@@ -1,0 +1,6 @@
+C:\Users\Camil\Documents\GitHub\FileStorageServer\IntegrationTests\obj\Debug\net8.0\IntegrationTests.csproj.AssemblyReference.cache
+C:\Users\Camil\Documents\GitHub\FileStorageServer\IntegrationTests\obj\Debug\net8.0\IntegrationTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Camil\Documents\GitHub\FileStorageServer\IntegrationTests\obj\Debug\net8.0\IntegrationTests.AssemblyInfoInputs.cache
+C:\Users\Camil\Documents\GitHub\FileStorageServer\IntegrationTests\obj\Debug\net8.0\IntegrationTests.AssemblyInfo.cs
+C:\Users\Camil\Documents\GitHub\FileStorageServer\IntegrationTests\obj\Debug\net8.0\IntegrationTests.csproj.CoreCompileInputs.cache
+C:\Users\Camil\Documents\GitHub\FileStorageServer\IntegrationTests\obj\Debug\net8.0\IntegrationTests.sourcelink.json

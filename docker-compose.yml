@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: ./src/FileStorage/Dockerfile # Adjust the path if necessary
+    ports:
+      - "5000:80"  # Expose port 80 in container to port 5000 on host
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=FileStorageDB;User=sa;Password=YourPassword123;
+      - MongoDbSettings__ConnectionString=mongodb://mongo:27017
+      - MongoDbSettings__DatabaseName=FileStorage
+      - MongoDbSettings__FileCollection=FileStorageDB
+      - Google__ClientId=911031744599-l50od06i5t89bmdl4amjjhdvacsdonm7.apps.googleusercontent.com
+      - JwtSettings__SecretKey=your-secret-key
+      - JwtSettings__Issuer=your-issuer
+      - JwtSettings__Audience=your-audience
+    depends_on:
+      - db
+      - mongo
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourPassword123
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  sql_data:
+  mongo_data:

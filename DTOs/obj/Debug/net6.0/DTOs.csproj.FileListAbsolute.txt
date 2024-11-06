@@ -1,0 +1,15 @@
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\bin\Debug\net6.0\DTOs.deps.json
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\bin\Debug\net6.0\DTOs.runtimeconfig.json
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\bin\Debug\net6.0\DTOs.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\bin\Debug\net6.0\DTOs.pdb
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\obj\Debug\net6.0\DTOs.csproj.AssemblyReference.cache
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\obj\Debug\net6.0\DTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\obj\Debug\net6.0\DTOs.AssemblyInfoInputs.cache
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\obj\Debug\net6.0\DTOs.AssemblyInfo.cs
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\obj\Debug\net6.0\DTOs.csproj.CoreCompileInputs.cache
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\obj\Debug\net6.0\DTOs.sourcelink.json
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\obj\Debug\net6.0\DTOs.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\obj\Debug\net6.0\refint\DTOs.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\obj\Debug\net6.0\DTOs.pdb
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\obj\Debug\net6.0\DTOs.genruntimeconfig.cache
+C:\Users\Camil\Documents\GitHub\FileStorageServer\DTOs\obj\Debug\net6.0\ref\DTOs.dll
