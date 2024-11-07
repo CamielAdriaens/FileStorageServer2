@@ -1,18 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using LOGIC;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Http;
 using MongoDB.Bson;
 using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Text;
-using Microsoft.IdentityModel.Tokens;
 using INTERFACES;
-
+using MODELS;
+using DTOs;
 
 namespace FileStorage.Controllers
 {
@@ -52,43 +47,39 @@ namespace FileStorage.Controllers
             }
         }
 
-        // Upload a file to MongoDB and store metadata in SQL
+
         [HttpPost("upload")]
         public async Task<IActionResult> UploadFile([FromForm] IFormFile file)
         {
             if (file == null || file.Length == 0)
                 return BadRequest("File is not provided");
 
-            var googleId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
-            var email = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
-            var name = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+            var googleId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var email = User.FindFirstValue(ClaimTypes.Email);
+            var name = User.FindFirstValue(ClaimTypes.Name);
 
             if (googleId == null)
                 return Unauthorized("Google ID not found");
 
             Console.WriteLine($"Passing to GetOrCreateUserByGoogleIdAsync - Google ID: {googleId}, Email: {email}, Name: {name}");
 
-            // Get or create the user
             var user = await _userService.GetOrCreateUserByGoogleIdAsync(googleId, email, name);
 
-            // Store the file in MongoDB
             using var stream = file.OpenReadStream();
             var mongoFileId = await _fileService.UploadFileAsync(stream, file.FileName);
 
-            // Store metadata in SQL
             await _userService.AddUserFileAsync(googleId, mongoFileId.ToString(), file.FileName);
 
             return Ok(new { FileId = mongoFileId.ToString() });
         }
 
-        // Download a file from MongoDB
         [HttpGet("download/{id}")]
         public async Task<IActionResult> DownloadFile(string id)
         {
             if (!ObjectId.TryParse(id, out ObjectId objectId))
                 return BadRequest("Invalid file ID");
 
-            var googleId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+            var googleId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (googleId == null)
                 return Unauthorized("Google ID not found");
 
@@ -105,14 +96,13 @@ namespace FileStorage.Controllers
             return File(fileStream, "application/octet-stream", file.FileName);
         }
 
-        // Delete a file from MongoDB and remove metadata from SQL
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteFile(string id)
         {
             if (!ObjectId.TryParse(id, out ObjectId objectId))
                 return BadRequest("Invalid file ID");
 
-            var googleId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+            var googleId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (googleId == null)
                 return Unauthorized("Google ID not found");
 
@@ -122,10 +112,7 @@ namespace FileStorage.Controllers
             if (file == null)
                 return NotFound("File not found or you do not have permission to access this file.");
 
-            // Delete the file from MongoDB
             await _fileService.DeleteFileAsync(objectId);
-
-            // Remove the file metadata from SQL
             await _userService.RemoveUserFileAsync(googleId, id);
 
             return NoContent();

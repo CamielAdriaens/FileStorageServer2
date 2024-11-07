@@ -10,5 +10,6 @@
         // Foreign key to the user who uploaded this file
         public int UserId { get; set; }
         public User User { get; set; }
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DTOs
 {
-    public class UserFileDto
+    public class UserFileDTO
     {
         public string MongoFileId { get; set; }
         public string FileName { get; set; }
