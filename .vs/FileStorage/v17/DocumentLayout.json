@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\dal\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|solutionrelative:dal\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\dal\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|solutionrelative:dal\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|solutionrelative:dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MongoDbSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\MongoDbSettings.cs",
+              "RelativeDocumentMoniker": "DAL\\MongoDbSettings.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\MongoDbSettings.cs",
+              "RelativeToolTip": "DAL\\MongoDbSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T13:49:58.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MongoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\MongoDbContext.cs",
+              "RelativeDocumentMoniker": "DAL\\MongoDbContext.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\MongoDbContext.cs*",
+              "RelativeToolTip": "DAL\\MongoDbContext.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T13:49:49.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DAL\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\AppDbContext.cs",
+              "RelativeToolTip": "DAL\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T13:49:46.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\appsettings.json",
+              "RelativeDocumentMoniker": "FileStorage\\appsettings.json",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\appsettings.json",
+              "RelativeToolTip": "FileStorage\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-07T13:49:39.79Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
