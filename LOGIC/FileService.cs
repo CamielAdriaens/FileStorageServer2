@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using INTERFACES; // For service and repository interfaces
 using DAL;        // For repository implementations
-using Models;
+using MODELS;
 
 namespace LOGIC
 {

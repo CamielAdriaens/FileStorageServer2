@@ -18,7 +18,6 @@ namespace FileStorage.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] // Google JWT authorization
     public class FilesController : ControllerBase
     {
         private readonly IFileService _fileService; // MongoDB file service
@@ -32,7 +31,7 @@ namespace FileStorage.Controllers
 
         [HttpGet("secure-files")]
         public async Task<IActionResult> GetUserFiles()
-      {
+        {
             var googleId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
 
             if (googleId == null)

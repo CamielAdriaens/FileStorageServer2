@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LOGIC
-build_property.ProjectDir = C:\Users\Camil\Documents\GitHub\FileStorageServer\LOGIC\
+build_property.ProjectDir = C:\Users\Camil\source\repos\FileStorage\LOGIC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -2,8 +2,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
-using LOGIC; // To access ConfigureAppServices extension
-using INTERFACES;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,22 +10,22 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// CORS configuration for development
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
         builder =>
         {
-            builder.AllowAnyOrigin()
+            builder.WithOrigins("http://localhost:3000") // Replace with your actual front-end URL(s)
                    .AllowAnyMethod()
-                   .AllowAnyHeader();
+                   .AllowAnyHeader()
+                   .AllowCredentials(); // For cookies or credentials if needed
         });
 });
+
 
 // Register all required services via extension method
 builder.Services.ConfigureAppServices(builder.Configuration);
 
-// Add JWT Bearer authentication for Google
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -36,18 +34,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         {
             ValidateIssuer = true,
             ValidateAudience = true,
-            ValidAudience = builder.Configuration["Google:ClientId"], // Google Client ID from appsettings
-            ValidIssuer = "https://accounts.google.com", // Google Issuer
-            IssuerSigningKeyResolver = (token, securityToken, kid, parameters) =>
-            {
-                // Use Google's public keys to validate the token
-                var client = new HttpClient();
-                var keys = client.GetStringAsync("https://www.googleapis.com/oauth2/v3/certs").Result;
-                var jsonWebKeySet = new JsonWebKeySet(keys);
-                return jsonWebKeySet.Keys;
-            }
+            ValidAudience = builder.Configuration["Google:ClientId"],
+            ValidIssuer = "https://accounts.google.com"
         };
     });
+
 
 var app = builder.Build();
 

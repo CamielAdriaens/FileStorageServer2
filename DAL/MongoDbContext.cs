@@ -6,7 +6,7 @@ using MongoDB.Bson;
 using System.IO;
 using System.Threading.Tasks;
 using INTERFACES; // For repository interfaces
-using Models;     // For data models/entities
+using MODELS;     // For data models/entities
 using System.Collections.Generic;
 
 namespace DAL

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\INTERFACES\\INTERFACES.csproj": {}
+    "C:\\Users\\Camil\\source\\repos\\FileStorage\\INTERFACES\\INTERFACES.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\INTERFACES\\INTERFACES.csproj": {
+    "C:\\Users\\Camil\\source\\repos\\FileStorage\\INTERFACES\\INTERFACES.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\INTERFACES\\INTERFACES.csproj",
+        "projectUniqueName": "C:\\Users\\Camil\\source\\repos\\FileStorage\\INTERFACES\\INTERFACES.csproj",
         "projectName": "INTERFACES",
-        "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\INTERFACES\\INTERFACES.csproj",
+        "projectPath": "C:\\Users\\Camil\\source\\repos\\FileStorage\\INTERFACES\\INTERFACES.csproj",
         "packagesPath": "C:\\Users\\Camil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\INTERFACES\\obj\\",
+        "outputPath": "C:\\Users\\Camil\\source\\repos\\FileStorage\\INTERFACES\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\Models\\Models.csproj"
+              "C:\\Users\\Camil\\source\\repos\\FileStorage\\MODELS\\MODELS.csproj": {
+                "projectPath": "C:\\Users\\Camil\\source\\repos\\FileStorage\\MODELS\\MODELS.csproj"
               }
             }
           }
@@ -60,25 +60,25 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[6.0.33, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.35, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.35, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.IdentityModel.JsonWebTokens": {
               "target": "Package",
-              "version": "[6.36.0, )"
+              "version": "[8.2.0, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[6.36.0, )"
+              "version": "[8.2.0, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
@@ -90,11 +90,15 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[6.9.0, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.9.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.36.0, )"
+              "version": "[8.2.0, )"
             },
             "System.Security.Claims": {
               "target": "Package",
@@ -121,14 +125,14 @@
         }
       }
     },
-    "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\Models\\Models.csproj": {
+    "C:\\Users\\Camil\\source\\repos\\FileStorage\\MODELS\\MODELS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\Models\\Models.csproj",
-        "projectName": "Models",
-        "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\Camil\\source\\repos\\FileStorage\\MODELS\\MODELS.csproj",
+        "projectName": "MODELS",
+        "projectPath": "C:\\Users\\Camil\\source\\repos\\FileStorage\\MODELS\\MODELS.csproj",
         "packagesPath": "C:\\Users\\Camil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer\\Models\\obj\\",
+        "outputPath": "C:\\Users\\Camil\\source\\repos\\FileStorage\\MODELS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -173,25 +177,25 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[6.0.33, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.35, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.35, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.IdentityModel.JsonWebTokens": {
               "target": "Package",
-              "version": "[6.36.0, )"
+              "version": "[8.2.0, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[6.36.0, )"
+              "version": "[8.2.0, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
@@ -203,11 +207,15 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[6.9.0, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.9.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.36.0, )"
+              "version": "[8.2.0, )"
             },
             "System.Security.Claims": {
               "target": "Package",

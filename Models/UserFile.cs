@@ -1,4 +1,4 @@
-﻿namespace Models
+﻿namespace MODELS
 {
     public class UserFile
     {
