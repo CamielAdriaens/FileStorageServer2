@@ -8,10 +8,25 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
+
+# Copy all .csproj files individually for dependency restoration
 COPY ["FileStorage.csproj", "./"]
+COPY ["DAL/DAL.csproj", "DAL/"]
+COPY ["DTOs/DTOs.csproj", "DTOs/"]
+COPY ["FileStorage/FileStorage.csproj", "FileStorage/"]
+COPY ["FileStorage.Tests/FileStorage.Tests.csproj", "FileStorage.Tests/"]
+COPY ["INTERFACES/INTERFACES.csproj", "INTERFACES/"]
+COPY ["LOGIC/LOGIC.csproj", "LOGIC/"]
+COPY ["MODELS/MODELS.csproj", "MODELS/"]
+
+# Restore dependencies for all projects
 RUN dotnet restore "./FileStorage.csproj"
+
+# Copy the entire source code into the container
 COPY . .
-WORKDIR "/src"
+
+# Set working directory to the main project and build the project
+WORKDIR "/src/FileStorage"
 RUN dotnet build "./FileStorage.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Publish stage
@@ -30,4 +45,5 @@ ENV MSSQL_CONNECTION_STRING="Server=mssqlstud.fhict.local;Database=dbi472595;Use
 ENV GOOGLE_CLIENT_ID="911031744599-l50od06i5t89bmdl4amjjhdvacsdonm7.apps.googleusercontent.com"
 ENV JWT_SECRET_KEY="thisisaverysecurelongsecretkey12345"
 
+# Set the entry point for the application
 ENTRYPOINT ["dotnet", "FileStorage.dll"]
