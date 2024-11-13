@@ -14,26 +14,22 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
+      - name: Display Directory Structure
+        run: |
+          echo "Displaying directory structure for debugging:"
+          ls -R
+          ls -R MODELS
+
       - name: Set up .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '8.0'  # Use the version of .NET you are using
+          dotnet-version: '8.0'  # Update to the correct .NET version
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore FileStorage.sln
 
       - name: Build the solution
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build FileStorage.sln --configuration Release
 
       - name: Run Unit Tests
-        run: dotnet test --no-build --verbosity normal
-
-      - name: Run Code Analysis with SonarCloud
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          dotnet tool install --global dotnet-sonarscanner
-          export PATH="$PATH:/home/runner/.dotnet/tools"
-          dotnet sonarscanner begin /k:"<YourProjectKey>" /o:"<YourOrganization>" /d:sonar.login=$SONAR_TOKEN
-          dotnet build
-          dotnet sonarscanner end /d:sonar.login=$SONAR_TOKEN
+        run: dotnet test FileStorage.sln --no-build --verbosity normal
