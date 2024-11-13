@@ -86,8 +86,7 @@
               "RelativeToolTip": "INTERFACES\\IFileService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:18:20.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T16:18:20.675Z"
             },
             {
               "$type": "Document",
@@ -99,8 +98,7 @@
               "RelativeToolTip": "INTERFACES\\IFileRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:18:18.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T16:18:18.592Z"
             },
             {
               "$type": "Document",
@@ -160,8 +158,7 @@
               "RelativeToolTip": "MODELS\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T14:34:05.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T14:34:05.595Z"
             },
             {
               "$type": "Document",
@@ -173,8 +170,7 @@
               "RelativeToolTip": "MODELS\\UserFile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T14:33:35.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T14:33:35.136Z"
             },
             {
               "$type": "Document",
@@ -186,8 +182,7 @@
               "RelativeToolTip": "DAL\\FileRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T14:06:55.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T14:06:55.187Z"
             },
             {
               "$type": "Document",
@@ -199,8 +194,7 @@
               "RelativeToolTip": "FileStorage\\Controllers\\FilesController.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAADAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T14:15:52.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T14:15:52.565Z"
             },
             {
               "$type": "Document",
@@ -212,8 +206,7 @@
               "RelativeToolTip": "FileStorage\\Program.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAswFIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T14:08:04.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T14:08:04.467Z"
             },
             {
               "$type": "Document",
@@ -225,8 +218,7 @@
               "RelativeToolTip": "FileStorage\\Controllers\\AuthController.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAAwBwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T14:06:14.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T14:06:14.625Z"
             },
             {
               "$type": "Document",
@@ -236,7 +228,7 @@
               "RelativeDocumentMoniker": "FileStorage\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Properties\\launchSettings.json",
               "RelativeToolTip": "FileStorage\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAfAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-07T13:54:08.042Z",
               "EditorCaption": ""
@@ -275,8 +267,7 @@
               "RelativeToolTip": "FileStorage\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-07T13:49:39.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T13:49:39.79Z"
             }
           ]
         }
