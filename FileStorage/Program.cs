@@ -17,10 +17,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAll",
         policyBuilder =>
         {
-            policyBuilder.WithOrigins("http://localhost:3000", "https://localhost:3000") // Allow both HTTP and HTTPS if needed
+            policyBuilder.WithOrigins("http://localhost:3000", "https://localhost:3000")
                          .AllowAnyMethod()
                          .AllowAnyHeader()
-                         .AllowCredentials(); // For cookies or credentials if needed
+                         .AllowCredentials();
         });
 });
 
@@ -39,26 +39,25 @@ builder.Services.AddControllers()
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        options.Authority = "https://accounts.google.com";
-
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
-            ValidIssuer = "https://accounts.google.com", // For Google token issuer validation
             ValidateAudience = true,
-            ValidAudience = builder.Configuration["Google:ClientId"], // The Google ClientId for validation
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["JwtSettings:Issuer"], // Your application's issuer
+            ValidAudience = builder.Configuration["JwtSettings:Audience"], // Your application's audience
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"])),
 
             // Map claims so they can be accessed with standard ClaimTypes
-            NameClaimType = ClaimTypes.NameIdentifier, // Maps the 'sub' claim to the NameIdentifier
+            NameClaimType = ClaimTypes.NameIdentifier,
             RoleClaimType = ClaimTypes.Role
         };
 
-        // Optional: Require HTTPS metadata retrieval
-        options.RequireHttpsMetadata = false; // Set to true in production
+        options.RequireHttpsMetadata = false;
     });
 
-// Optional: Add authorization policies if needed
+// Optional: Add authorization policies
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("UserPolicy", policy =>

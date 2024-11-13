@@ -11,12 +11,13 @@ using DTOs;
 
 namespace FileStorage.Controllers
 {
+    [Authorize] // Requires authentication for all actions in the controller
     [Route("api/[controller]")]
     [ApiController]
     public class FilesController : ControllerBase
     {
-        private readonly IFileService _fileService; // MongoDB file service
-        private readonly IUserService _userService; // SQL user service
+        private readonly IFileService _fileService;
+        private readonly IUserService _userService;
 
         public FilesController(IFileService fileService, IUserService userService)
         {
@@ -27,7 +28,7 @@ namespace FileStorage.Controllers
         [HttpGet("secure-files")]
         public async Task<IActionResult> GetUserFiles()
         {
-            var googleId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+            var googleId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             if (googleId == null)
             {
@@ -46,7 +47,6 @@ namespace FileStorage.Controllers
                 return StatusCode(500, "Internal server error while retrieving user files.");
             }
         }
-
 
         [HttpPost("upload")]
         public async Task<IActionResult> UploadFile([FromForm] IFormFile file)
