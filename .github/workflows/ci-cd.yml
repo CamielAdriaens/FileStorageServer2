@@ -14,16 +14,19 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Display Directory Structure
+      - name: Display Root Directory Structure
         run: |
-          echo "Displaying directory structure for debugging:"
-          ls -R
-          ls -R MODELS
+          echo "Root directory structure:"
+          ls -al
+          echo "MODELS directory structure:"
+          ls -al MODELS || echo "MODELS directory not found"
+          echo "Contents of FileStorage.sln:"
+          cat FileStorage.sln || echo "Solution file not found"
 
       - name: Set up .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '8.0'  # Update to the correct .NET version
+          dotnet-version: '8.0'
 
       - name: Restore dependencies
         run: dotnet restore FileStorage.sln
