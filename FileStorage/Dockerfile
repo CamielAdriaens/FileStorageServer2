@@ -1,16 +1,10 @@
-# See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-# Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
-# For more information, please see https://aka.ms/containercompat
-
-# This stage is used when running from VS in fast mode (Default for Debug configuration)
+# Base image for runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-nanoserver-1809 AS base
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-
-# This stage is used to build the service project
+# Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0-nanoserver-1809 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
@@ -20,13 +14,20 @@ COPY . .
 WORKDIR "/src/FileStorage"
 RUN dotnet build "./FileStorage.csproj" -c %BUILD_CONFIGURATION% -o /app/build
 
-# This stage is used to publish the service project to be copied to the final stage
+# Publish stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./FileStorage.csproj" -c %BUILD_CONFIGURATION% -o /app/publish /p:UseAppHost=false
 
-# This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
+# Final stage for runtime
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+
+# Environment variables for sensitive configurations
+ENV MONGODB_CONNECTION_STRING="mongodb+srv://472595:mongodatabase@clusterfilestorage.en7np.mongodb.net/?retryWrites=true&w=majority&appName=ClusterFileStorage&authMechanism=SCRAM-SHA-1"
+ENV MSSQL_CONNECTION_STRING="Server=mssqlstud.fhict.local;Database=dbi472595;User Id=dbi472595;Password=database;MultipleActiveResultSets=true;TrustServerCertificate=True"
+ENV GOOGLE_CLIENT_ID="911031744599-l50od06i5t89bmdl4amjjhdvacsdonm7.apps.googleusercontent.com"
+ENV JWT_SECRET_KEY="thisisaverysecurelongsecretkey12345"
+
 ENTRYPOINT ["dotnet", "FileStorage.dll"]
