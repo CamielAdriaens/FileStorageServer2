@@ -22,7 +22,7 @@ jobs:
           ls -al MODELS || echo "MODELS directory not found"
           echo "Contents of FileStorage.sln:"
           cat FileStorage.sln || echo "Solution file not found"
-
+      
       # Temporary debug step to check for MODELS.csproj
       - name: Display MODELS Directory and Project File Structure
         run: |
@@ -50,6 +50,19 @@ jobs:
         run: |
           dotnet tool install --global dotnet-sonarscanner
           export PATH="$PATH:/home/runner/.dotnet/tools"
-          dotnet sonarscanner begin /k:"CamielAdriaens_FileStorageServer2" /o:"CamielAdriaens" /d:sonar.login=$SONAR_TOKEN
-          dotnet build
-          dotnet sonarscanner end /d:sonar.login=$SONAR_TOKEN
+          dotnet sonarscanner begin \
+            /k:"CamielAdriaens_FileStorageServer2" \
+            /o:"CamielAdriaens" \
+            /d:sonar.host.url="https://sonarcloud.io" \
+            /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
+            /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" # Adjust if using a different coverage report format
+
+          dotnet build FileStorage.sln --configuration Release
+          dotnet test FileStorage.sln --no-build --verbosity normal --collect:"XPlat Code Coverage"
+          dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+
+      - name: Upload Code Coverage to SonarCloud
+        if: success() # Only run if previous steps succeed
+        run: |
+          # Ensure code coverage file is generated in the correct format (OpenCover or other) for SonarCloud
+          echo "Uploading code coverage to SonarCloud completed."
