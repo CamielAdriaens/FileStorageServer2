@@ -2,33 +2,30 @@
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using MongoDB.Driver.GridFS;
 using Xunit;
 using DAL;
 using MODELS;
 using Microsoft.Extensions.Options;
-using Mongo2Go;
 using System.Collections.Generic;
 
 namespace FileStorage.Tests.IntegrationTests
 {
     public class FileRepositoryIntegrationTests : IAsyncLifetime
     {
-        private readonly MongoDbRunner _mongoRunner;
         private readonly IMongoDatabase _database;
         private readonly FileRepository _fileRepository;
 
         public FileRepositoryIntegrationTests()
         {
-            // Initialize an in-memory MongoDB instance
-            _mongoRunner = MongoDbRunner.Start();
-            var client = new MongoClient(_mongoRunner.ConnectionString);
+            // Use the MongoDB container connection string for CI environment
+            var connectionString = "mongodb://localhost:27017"; // Connects to Docker MongoDB service
+            var client = new MongoClient(connectionString);
             _database = client.GetDatabase("TestDatabase");
 
-            // Setup repository with in-memory MongoDB database
+            // Setup repository with MongoDB database from the Docker container
             var settings = Options.Create(new MongoDbSettings
             {
-                ConnectionString = _mongoRunner.ConnectionString,
+                ConnectionString = connectionString,
                 DatabaseName = "TestDatabase"
             });
             _fileRepository = new FileRepository(settings);
@@ -38,9 +35,9 @@ namespace FileStorage.Tests.IntegrationTests
 
         public async Task DisposeAsync()
         {
+            // Clean up test data after each test
             await _database.DropCollectionAsync("fs.files");
             await _database.DropCollectionAsync("fs.chunks");
-            _mongoRunner.Dispose();
         }
 
         [Fact]
