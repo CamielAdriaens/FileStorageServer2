@@ -86,3 +86,5 @@ resharper.log
 node_modules/
 dist/
 /.vs
+.vs/FileStorage/v17/.suo
+.vs/FileStorage/v17/DocumentLayout.backup.json
