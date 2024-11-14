@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj" />
+    <ProjectReference Include="..\DTOs\DTOs.csproj" />
     <ProjectReference Include="..\INTERFACES\INTERFACES.csproj" />
     <ProjectReference Include="..\MODELS\MODELS.csproj" />
   </ItemGroup>

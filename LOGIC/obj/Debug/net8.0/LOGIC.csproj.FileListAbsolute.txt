@@ -41,3 +41,5 @@ C:\Users\Camil\Documents\GitHub\FileStorageServer2\LOGIC\obj\Debug\net8.0\refint
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\LOGIC\obj\Debug\net8.0\LOGIC.pdb
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\LOGIC\obj\Debug\net8.0\LOGIC.genruntimeconfig.cache
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\LOGIC\obj\Debug\net8.0\ref\LOGIC.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\LOGIC\bin\Debug\net8.0\DTOs.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\LOGIC\bin\Debug\net8.0\DTOs.pdb

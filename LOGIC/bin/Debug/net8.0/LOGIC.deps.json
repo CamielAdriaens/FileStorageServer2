@@ -9,6 +9,7 @@
       "LOGIC/1.0.0": {
         "dependencies": {
           "DAL": "1.0.0",
+          "DTOs": "1.0.0",
           "Google.Apis.Auth": "1.68.0",
           "INTERFACES": "1.0.0",
           "MODELS": "1.0.0",
@@ -1271,8 +1272,30 @@
           }
         }
       },
+      "DTOs/1.0.0": {
+        "dependencies": {
+          "Google.Apis.Auth": "1.68.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
+          "Microsoft.IdentityModel.JsonWebTokens": "8.2.0",
+          "Microsoft.IdentityModel.Tokens": "8.2.0",
+          "MongoDB.Driver": "2.30.0",
+          "MongoDB.Driver.GridFS": "2.30.0",
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "Swashbuckle.AspNetCore.Swagger": "6.9.0",
+          "System.IdentityModel.Tokens.Jwt": "8.2.0",
+          "System.Security.Claims": "4.3.0"
+        },
+        "runtime": {
+          "DTOs.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "INTERFACES/1.0.0": {
         "dependencies": {
+          "DTOs": "1.0.0",
           "Google.Apis.Auth": "1.68.0",
           "MODELS": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.10",
@@ -2087,6 +2110,11 @@
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
     },
     "DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DTOs/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

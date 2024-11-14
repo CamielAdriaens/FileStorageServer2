@@ -347,3 +347,8 @@ C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage\obj\Debug\net8.0\
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage\obj\Debug\net8.0\FileStorage.pdb
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage\obj\Debug\net8.0\FileStorage.genruntimeconfig.cache
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage\obj\Debug\net8.0\ref\FileStorage.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage\bin\Debug\net8.0\Mongo2Go.dll
