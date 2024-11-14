@@ -19,7 +19,7 @@ jobs:
           --health-cmd "mongosh --eval 'db.adminCommand(\"ping\")'" 
           --health-interval=10s 
           --health-timeout=5s 
-          --health-retries=5  # Ensure no newline or extra space after this line
+          --health-retries=5
 
     steps:
       - name: Checkout Code
@@ -65,6 +65,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          ./.sonar/scanner/dotnet-sonarscanner begin /k:"CamielAdriaens_FileStorageServer2" /o:"camieladriaens" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build FileStorage.sln --configuration Release
-          ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          ./.sonar/scanner/dotnet-sonarscanner begin /k:"CamielAdriaens_FileStorageServer2" 
