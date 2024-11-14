@@ -1,0 +1,87 @@
+# .NET Core / ASP.NET Core
+bin/
+obj/
+
+# Build Folders
+*.dll
+*.exe
+*.app
+*.dmg
+*.pkg
+*.so
+*.a
+*.lib
+
+# Runtime files
+*.log
+*.pdb
+*.mdb
+
+# Application files
+appsettings*.json
+appsettings*.Development.json
+secrets.json
+
+# User-specific files
+*.user
+*.lock.json
+*.suo
+*.userosscache
+*.sln.docstates
+
+# DotNet specific files
+.vscode/
+*.code-workspace
+.history/
+
+# Coverage results
+TestResults/
+*.coverage
+*.coveragexml
+*.opencover
+coverage/
+
+# Auto-generated files by NuGet
+*.nupkg
+*.snupkg
+
+# Entity Framework Migrations
+Migrations/
+
+# Logs
+logs/
+*.log
+
+# Uncomment if using Azure functions
+# local.settings.json
+
+# Visual Studio
+.vs/
+
+# Rider
+.idea/
+
+# Mac
+*.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# SonarCloud files
+.sonarqube/
+
+# Resharper
+_ReSharper*/
+resharper.log
+
+# JetBrains Rider
+.idea/
+
+# npm packages
+node_modules/
+dist/
