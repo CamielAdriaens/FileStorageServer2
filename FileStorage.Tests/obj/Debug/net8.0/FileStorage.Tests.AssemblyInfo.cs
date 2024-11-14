@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileStorage.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2a422eca0069f26640c944bb71097fbf00ef830")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3682ecb8312f1e0dc1bdce27ee683086f82ec74a")]
 [assembly: System.Reflection.AssemblyProductAttribute("FileStorage.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileStorage.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
