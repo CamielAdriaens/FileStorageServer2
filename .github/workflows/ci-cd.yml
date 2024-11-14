@@ -22,14 +22,7 @@ jobs:
           ls -al MODELS || echo "MODELS directory not found"
           echo "Contents of FileStorage.sln:"
           cat FileStorage.sln || echo "Solution file not found"
-      
-      # Temporary debug step to check for MODELS.csproj
-      - name: Display MODELS Directory and Project File Structure
-        run: |
-          echo "Checking if MODELS directory and MODELS.csproj exist:"
-          ls -al MODELS || echo "MODELS directory not found"
-          ls -al MODELS/MODELS.csproj || echo "MODELS.csproj not found in MODELS directory"
-
+  
       - name: Set up .NET
         uses: actions/setup-dotnet@v1
         with:
@@ -43,5 +36,34 @@ jobs:
 
       - name: Run Unit Tests
         run: dotnet test FileStorage.sln --no-build --verbosity normal
+        
+      - name: Cache SonarQube Cloud packages
+        uses: actions/cache@v4
+        with:
+          path: ~\sonar\cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+      - name: Cache SonarQube Cloud scanner
+        id: cache-sonar-scanner
+        uses: actions/cache@v4
+        with:
+          path: .\.sonar\scanner
+          key: ${{ runner.os }}-sonar-scanner
+          restore-keys: ${{ runner.os }}-sonar-scanner
+      - name: Install SonarQube Cloud scanner
+        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+        shell: powershell
+        run: |
+          New-Item -Path .\.sonar\scanner -ItemType Directory
+          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+      - name: Build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        shell: powershell
+        run: |
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"CamielAdriaens_FileStorageServer2" /o:"CamielAdriaens" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet build
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
       
