@@ -10,16 +10,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    services:
+     services:
       mongo:
         image: mongo:5.0
         ports:
           - 27017:27017
-        options: > 
-          --health-cmd "mongosh --eval 'db.adminCommand(\"ping\")'" 
-          --health-interval=10s 
-          --health-timeout=5s 
-          --health-retries=5
+        options: |
+          --health-cmd "mongosh --eval 'db.adminCommand(\"ping\")'" --health-interval=10s --health-timeout=5s --health-retries=5 -e GITHUB_ACTIONS=true -e CI=true
 
     steps:
       - name: Checkout Code
