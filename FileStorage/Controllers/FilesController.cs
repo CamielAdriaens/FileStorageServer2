@@ -11,7 +11,7 @@ using DTOs;
 
 namespace FileStorage.Controllers
 {
-    [Authorize] // Requires authentication for all actions in the controller
+    [Authorize] 
     [Route("api/[controller]")]
     [ApiController]
     public class FilesController : ControllerBase

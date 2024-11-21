@@ -19,7 +19,9 @@ C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\bin\Debug\net8.0\I
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\bin\Debug\net8.0\INTERFACES.runtimeconfig.json
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\bin\Debug\net8.0\INTERFACES.dll
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\bin\Debug\net8.0\INTERFACES.pdb
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\bin\Debug\net8.0\DTOs.dll
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\bin\Debug\net8.0\MODELS.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\bin\Debug\net8.0\DTOs.pdb
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\bin\Debug\net8.0\MODELS.pdb
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\obj\Debug\net8.0\INTERFACES.csproj.AssemblyReference.cache
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\obj\Debug\net8.0\INTERFACES.GeneratedMSBuildEditorConfig.editorconfig
@@ -33,5 +35,3 @@ C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\obj\Debug\net8.0\r
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\obj\Debug\net8.0\INTERFACES.pdb
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\obj\Debug\net8.0\INTERFACES.genruntimeconfig.cache
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\obj\Debug\net8.0\ref\INTERFACES.dll
-C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\bin\Debug\net8.0\DTOs.dll
-C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\bin\Debug\net8.0\DTOs.pdb
