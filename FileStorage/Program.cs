@@ -3,10 +3,12 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using DAL;
 using System.Security.Claims;
-
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Configure URLs for Docker
+builder.WebHost.UseUrls("http://0.0.0.0:8080", "https://0.0.0.0:8081");
+
+// Add services to the container
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -24,7 +26,7 @@ builder.Services.AddCors(options =>
         });
 });
 
-// Configure application services (includes DbContext, repositories, and services)
+// Configure application services
 builder.Services.ConfigureAppServices(builder.Configuration);
 
 // Configure MongoDB settings
@@ -45,11 +47,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = builder.Configuration["JwtSettings:Issuer"], // Your application's issuer
-            ValidAudience = builder.Configuration["JwtSettings:Audience"], // Your application's audience
+            ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+            ValidAudience = builder.Configuration["JwtSettings:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"])),
-
-            // Map claims so they can be accessed with standard ClaimTypes
             NameClaimType = ClaimTypes.NameIdentifier,
             RoleClaimType = ClaimTypes.Role
         };
@@ -57,24 +57,24 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.RequireHttpsMetadata = false;
     });
 
-// Optional: Add authorization policies
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("UserPolicy", policy =>
-        policy.RequireClaim(ClaimTypes.NameIdentifier)); // Require NameIdentifier for user actions
+        policy.RequireClaim(ClaimTypes.NameIdentifier));
 });
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Enable Swagger for all environments
+app.UseSwagger();
+app.UseSwaggerUI();
+
+if (!app.Environment.IsProduction())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseHttpsRedirection();
 }
 
-app.UseHttpsRedirection();
-app.UseCors("AllowAll"); // Ensure CORS is applied before Authentication and Authorization
+app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

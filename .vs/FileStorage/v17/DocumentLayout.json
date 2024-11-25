@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -63,14 +71,6 @@
       "RelativeMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|solutionrelative:dal\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|solutionrelative:interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -118,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,20 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserRepositoryIntegrationTests.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
-              "RelativeDocumentMoniker": "FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
-              "RelativeToolTip": "FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwBwAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T21:13:53.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "FileService.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\FileService.cs",
               "RelativeDocumentMoniker": "LOGIC\\FileService.cs",
@@ -151,12 +138,11 @@
               "RelativeToolTip": "LOGIC\\FileService.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAQwBMAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:40:08.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T20:40:08.085Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FilesController.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Controllers\\FilesController.cs",
               "RelativeDocumentMoniker": "FileStorage\\Controllers\\FilesController.cs",
@@ -169,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "FileServiceTests.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\UnitTests\\FileServiceTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\UnitTests\\FileServiceTests.cs",
@@ -177,12 +163,11 @@
               "RelativeToolTip": "FileStorage.Tests\\UnitTests\\FileServiceTests.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAYwAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:43:10.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T20:43:10.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "FileStorage\\Controllers\\AuthController.cs",
@@ -190,12 +175,11 @@
               "RelativeToolTip": "FileStorage\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAQwBUAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T18:54:06.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T18:54:06.736Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\User.cs",
               "RelativeDocumentMoniker": "MODELS\\User.cs",
@@ -203,12 +187,11 @@
               "RelativeToolTip": "MODELS\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T13:01:11.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T13:01:11.638Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UserFile.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\UserFile.cs",
               "RelativeDocumentMoniker": "MODELS\\UserFile.cs",
@@ -216,12 +199,49 @@
               "RelativeToolTip": "MODELS\\UserFile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T13:01:18.397Z",
+              "WhenOpened": "2024-11-14T13:01:18.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "FileStorage\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Properties\\launchSettings.json",
+              "RelativeToolTip": "FileStorage\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-13T18:53:02.274Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Program.cs",
+              "RelativeDocumentMoniker": "FileStorage\\Program.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Program.cs",
+              "RelativeToolTip": "FileStorage\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T20:41:23.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserRepositoryIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
+              "RelativeDocumentMoniker": "FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
+              "RelativeToolTip": "FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwBwAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T21:13:53.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "FileRepositoryIntegrationTests.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\FileRepositoryIntegrationTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\IntegrationTests\\FileRepositoryIntegrationTests.cs",
@@ -229,12 +249,11 @@
               "RelativeToolTip": "FileStorage.Tests\\IntegrationTests\\FileRepositoryIntegrationTests.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAgwCEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T21:19:38.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T21:19:38.223Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\UserService.cs",
               "RelativeDocumentMoniker": "LOGIC\\UserService.cs",
@@ -242,12 +261,11 @@
               "RelativeToolTip": "LOGIC\\UserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T15:05:10.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T15:05:10.948Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\appsettings.json",
               "RelativeDocumentMoniker": "FileStorage\\appsettings.json",
@@ -255,12 +273,11 @@
               "RelativeToolTip": "FileStorage\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-13T18:52:25.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T18:52:25.731Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "UserServiceTests.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\UnitTests\\UserServiceTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\UnitTests\\UserServiceTests.cs",
@@ -268,12 +285,11 @@
               "RelativeToolTip": "FileStorage.Tests\\UnitTests\\UserServiceTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:43:24.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T20:43:24.193Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "AuthControllerTests.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\SecurityTests\\AuthControllerTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\SecurityTests\\AuthControllerTests.cs",
@@ -281,12 +297,11 @@
               "RelativeToolTip": "FileStorage.Tests\\SecurityTests\\AuthControllerTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T21:16:13.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T21:16:13.286Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "FileRepository.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\FileRepository.cs",
               "RelativeDocumentMoniker": "DAL\\FileRepository.cs",
@@ -294,12 +309,11 @@
               "RelativeToolTip": "DAL\\FileRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T14:06:55.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T14:06:55.187Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "UserFileDto.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\UserFileDto.cs",
               "RelativeDocumentMoniker": "DTOs\\UserFileDto.cs",
@@ -307,12 +321,11 @@
               "RelativeToolTip": "DTOs\\UserFileDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T15:05:29.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T15:05:29.377Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "IFileService.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\IFileService.cs",
               "RelativeDocumentMoniker": "INTERFACES\\IFileService.cs",
@@ -320,21 +333,7 @@
               "RelativeToolTip": "INTERFACES\\IFileService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:18:20.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Program.cs",
-              "RelativeDocumentMoniker": "FileStorage\\Program.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Program.cs",
-              "RelativeToolTip": "FileStorage\\Program.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAIwFIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:41:23.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T16:18:20.675Z"
             },
             {
               "$type": "Document",
@@ -346,8 +345,7 @@
               "RelativeToolTip": "INTERFACES\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:41:09.497Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T20:41:09.497Z"
             },
             {
               "$type": "Document",
@@ -359,8 +357,7 @@
               "RelativeToolTip": "LOGIC\\ServiceExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T14:39:07.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T14:39:07.344Z"
             },
             {
               "$type": "Document",
@@ -372,21 +369,7 @@
               "RelativeToolTip": "INTERFACES\\IFileRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:18:18.592Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "FileStorage\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Properties\\launchSettings.json",
-              "RelativeToolTip": "FileStorage\\Properties\\launchSettings.json",
-              "ViewState": "AgIAACgAAAAAAAAAAABRwCwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-13T18:53:02.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T16:18:18.592Z"
             },
             {
               "$type": "Document",
@@ -398,8 +381,7 @@
               "RelativeToolTip": "DAL\\UserRepository.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAswEUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:39:54.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T20:39:54.753Z"
             },
             {
               "$type": "Document",
@@ -411,8 +393,7 @@
               "RelativeToolTip": "INTERFACES\\IUserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T18:04:58.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T18:04:58.085Z"
             },
             {
               "$type": "Document",
@@ -424,8 +405,7 @@
               "RelativeToolTip": "DAL\\MongoDbContext.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAswEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T13:49:49.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T13:49:49.954Z"
             },
             {
               "$type": "Document",
@@ -437,8 +417,7 @@
               "RelativeToolTip": "DAL\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:39:33.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T20:39:33.196Z"
             },
             {
               "$type": "Document",
@@ -450,8 +429,7 @@
               "RelativeToolTip": "FileStorage\\FileStorage.csproj.user",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
-              "WhenOpened": "2024-11-13T17:56:01.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T17:56:01.92Z"
             },
             {
               "$type": "Document",
@@ -463,8 +441,7 @@
               "RelativeToolTip": "DAL\\MongoDbSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T13:49:58.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T13:49:58.114Z"
             },
             {
               "$type": "Document",
@@ -476,8 +453,7 @@
               "RelativeToolTip": "DTOs\\UserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T15:06:01.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T15:06:01.746Z"
             }
           ]
         }
