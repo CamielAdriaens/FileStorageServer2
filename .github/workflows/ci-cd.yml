@@ -15,34 +15,50 @@ jobs:
         image: mongo:5.0
         ports:
           - 27017:27017
-        options: |
-          --health-cmd "mongosh --eval 'db.adminCommand(\"ping\")'" --health-interval=10s --health-timeout=5s --health-retries=5 -e GITHUB_ACTIONS=true -e CI=true
+        options: >
+          --health-cmd "mongosh --eval 'db.adminCommand(\"ping\")'" 
+          --health-interval=10s 
+          --health-timeout=5s 
+          --health-retries=5 
+          -e GITHUB_ACTIONS=true 
+          -e CI=true
 
     steps:
+      # Step 1: Checkout Code
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
+      # Step 2: Set up .NET
       - name: Set up .NET
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.0'
 
+      # Step 3: Restore Dependencies
       - name: Restore dependencies
         run: dotnet restore FileStorage.sln
 
+      # Step 4: Build the Solution
       - name: Build the solution
         run: dotnet build FileStorage.sln --configuration Release
 
-      - name: Run Unit Tests
-        run: dotnet test FileStorage.Tests/FileStorage.Tests.csproj --no-build --configuration Release --verbosity normal
+      # Step 5: Run Unit Tests with Code Coverage
+      - name: Run Unit Tests with Code Coverage
+        run: |
+          dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
+            --no-build --configuration Release \
+            --collect:"XPlat Code Coverage"
+        
+      # Step 6: Generate Code Coverage Report
+      - name: Generate Coverage Report
+        run: |
+          dotnet tool install -g dotnet-reportgenerator-globaltool
+          reportgenerator -reports:TestResults/**/*.xml \
+            -targetdir:coverage-report
+        env:
+          DOTNET_CLI_HOME: ${{ runner.temp }} # Prevent permission issues on GitHub-hosted runners
 
-      - name: Cache SonarQube Cloud packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.sonar/cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
-
+      # Step 7: Cache SonarQube Scanner
       - name: Cache SonarQube Cloud scanner
         id: cache-sonar-scanner
         uses: actions/cache@v4
@@ -51,17 +67,32 @@ jobs:
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
 
+      # Step 8: Install SonarQube Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
 
+      # Step 9: Build and Analyze with SonarQube
       - name: Build and analyze with SonarQube
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          ./.sonar/scanner/dotnet-sonarscanner begin /k:"CamielAdriaens_FileStorageServer2" /o:"camieladriaens" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          ./.sonar/scanner/dotnet-sonarscanner begin \
+            /k:"CamielAdriaens_FileStorageServer2" \
+            /o:"camieladriaens" \
+            /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
+            /d:sonar.host.url="https://sonarcloud.io" \
+            /d:sonar.cs.opencover.reportsPaths="TestResults/**/*.xml"
           dotnet build FileStorage.sln --configuration Release
-          ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          ./.sonar/scanner/dotnet-sonarscanner end \
+            /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+
+      # Step 10: Upload Coverage Report as an Artifact
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage-report
