@@ -47,17 +47,11 @@ jobs:
         run: |
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
             --no-build --configuration Release \
-            --collect:"XPlat Code Coverage"
-        # Step 6: Generate Code Coverage Report
-      - name: Generate Coverage Report
-        run: |
-          dotnet tool install -g dotnet-reportgenerator-globaltool
-          export PATH="$PATH:~/.dotnet/tools" # Ensure global tools are accessible
-          reportgenerator -reports:TestResults/**/*.xml -targetdir:coverage-report
-        env:
-          DOTNET_CLI_HOME: ${{ runner.temp }} # Prevent permission issues
+            /p:CollectCoverage=true \
+            /p:CoverletOutputFormat=cobertura \
+            /p:CoverletOutput=TestResults/coverage.cobertura.xml
 
-      # Step 7: Cache SonarQube Scanner
+      # Step 6: Cache SonarQube Cloud Scanner
       - name: Cache SonarQube Cloud scanner
         id: cache-sonar-scanner
         uses: actions/cache@v4
@@ -66,14 +60,14 @@ jobs:
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
 
-      # Step 8: Install SonarQube Scanner if Not Cached
+      # Step 7: Install SonarQube Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
 
-      # Step 9: Build and Analyze with SonarQube
+      # Step 8: Build and Analyze with SonarQube
       - name: Build and analyze with SonarQube
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -84,14 +78,14 @@ jobs:
             /o:"camieladriaens" \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
             /d:sonar.host.url="https://sonarcloud.io" \
-            /d:sonar.cs.opencover.reportsPaths="TestResults/**/*.xml"
+            /d:sonar.cs.opencover.reportsPaths="TestResults/coverage.cobertura.xml"
           dotnet build FileStorage.sln --configuration Release
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
 
-      # Step 10: Upload Coverage Report as an Artifact
+      # Step 9: Upload Coverage Report
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v3
         with:
-          name: coverage-report
-          path: coverage-report
+          name: code-coverage-report
+          path: TestResults/coverage.cobertura.xml
