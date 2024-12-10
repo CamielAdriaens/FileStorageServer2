@@ -1,4 +1,4 @@
-# Stage 1: Base runtime image
+# Stage 1: Base runtime image (for production)
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
@@ -8,7 +8,8 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy project files to their respective directories
+# Copy solution file and restore dependencies
+COPY ["FileStorage.sln", "./"]
 COPY ["FileStorage/FileStorage.csproj", "FileStorage/"]
 COPY ["DAL/DAL.csproj", "DAL/"]
 COPY ["DTOs/DTOs.csproj", "DTOs/"]
@@ -17,20 +18,24 @@ COPY ["INTERFACES/INTERFACES.csproj", "INTERFACES/"]
 COPY ["LOGIC/LOGIC.csproj", "LOGIC/"]
 COPY ["MODELS/MODELS.csproj", "MODELS/"]
 
-# Restore dependencies for the main project
-RUN dotnet restore "FileStorage/FileStorage.csproj"
+# Restore all the dependencies defined in the solution file
+RUN dotnet restore "FileStorage.sln"
 
-# Copy all source code and build the application
+# Copy the rest of the code
 COPY . .
+
+# Build the application in Release configuration
 WORKDIR "/src/FileStorage"
 RUN dotnet build -c Release -o /app/build
 
-# Stage 3: Publish the application
+# Stage 3: Publish the application (to a separate directory)
 FROM build AS publish
 RUN dotnet publish -c Release -o /app/publish
 
-# Stage 4: Final runtime image
+# Stage 4: Final runtime image (production)
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=publish /app/publish . 
+
+# Use ENTRYPOINT to run the application when the container starts
 ENTRYPOINT ["dotnet", "FileStorage.dll"]
