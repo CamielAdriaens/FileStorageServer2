@@ -42,7 +42,11 @@ jobs:
       - name: Build the solution
         run: dotnet build FileStorage.sln --configuration Release
 
-      # Step 5: Run Unit Tests with Code Coverage
+      # Step 5: Ensure Coverage Output Directory Exists
+      - name: Ensure Coverage Output Directory Exists
+        run: mkdir -p TestResults/coverage/
+
+      # Step 6: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
         run: |
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
@@ -51,11 +55,13 @@ jobs:
             /p:CoverletOutput=TestResults/coverage/ \
             /p:CoverletOutputFormat=cobertura
 
-      # Step 6: Verify Coverage Files (Optional - for Debugging)
+      # Step 7: List Coverage Files (Debugging)
       - name: List Coverage Files
-        run: ls -R TestResults/coverage/
+        run: |
+          echo "Listing files in TestResults/coverage/"
+          ls -R TestResults/coverage/  # Check if the coverage file exists
 
-      # Step 7: Cache SonarQube Cloud Scanner
+      # Step 8: Cache SonarQube Cloud Scanner
       - name: Cache SonarQube Cloud scanner
         id: cache-sonar-scanner
         uses: actions/cache@v4
@@ -64,14 +70,14 @@ jobs:
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
 
-      # Step 8: Install SonarQube Scanner if Not Cached
+      # Step 9: Install SonarQube Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
 
-      # Step 9: Build and Analyze with SonarQube
+      # Step 10: Build and Analyze with SonarQube
       - name: Build and analyze with SonarQube
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -87,7 +93,7 @@ jobs:
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
 
-      # Step 10: Upload Coverage Report
+      # Step 11: Upload Coverage Report
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v3
         with:
