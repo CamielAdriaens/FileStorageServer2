@@ -52,16 +52,7 @@ jobs:
             /p:CoverletOutputFormat=cobertura
 
  
-      # Step 7: Connect to VPN (Cisco AnyConnect)
-      - name: Connect to VPN
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y openconnect
-          echo "${{ secrets.VPN_PASSWORD }}" | sudo openconnect --user="${{ secrets.VPN_USERNAME }}" --passwd-on-stdin --no-dtls vdi.fhict.nl
-        env:
-          VPN_PASSWORD: ${{ secrets.VPN_PASSWORD }}
-          VPN_USERNAME: ${{ secrets.VPN_USERNAME }}
-
+     
       # Step 8: Cache SonarQube Cloud Scanner
       - name: Cache SonarQube Cloud scanner
         id: cache-sonar-scanner
