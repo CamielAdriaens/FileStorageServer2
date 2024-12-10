@@ -34,15 +34,26 @@ jobs:
         with:
           dotnet-version: '8.0'
 
-      # Step 3: Restore Dependencies
+      # Step 3: Install openconnect for VPN
+      - name: Install openconnect for VPN
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y openconnect
+
+      # Step 4: Connect to VPN
+      - name: Connect to VPN
+        run: |
+          echo "${{ secrets.VPN_PASSWORD }}" | sudo openconnect --user="${{ secrets.VPN_USERNAME }}" --passwd-on-stdin vdi.fhict.nl
+
+      # Step 5: Restore Dependencies
       - name: Restore dependencies
         run: dotnet restore FileStorage.sln
 
-      # Step 4: Build the Solution
+      # Step 6: Build the Solution
       - name: Build the solution
         run: dotnet build FileStorage.sln --configuration Release
 
-      # Step 5: Run Unit Tests with Code Coverage (using Coverlet)
+      # Step 7: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
         run: |
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
@@ -51,8 +62,7 @@ jobs:
             /p:CoverletOutput=TestResults/coverage/ \
             /p:CoverletOutputFormat=cobertura
 
-    
-      # Step 7: Cache SonarQube Cloud Scanner
+      # Step 8: Cache SonarQube Cloud Scanner
       - name: Cache SonarQube Cloud scanner
         id: cache-sonar-scanner
         uses: actions/cache@v4
@@ -61,14 +71,14 @@ jobs:
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
 
-      # Step 8: Install SonarQube Scanner if Not Cached
+      # Step 9: Install SonarQube Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
 
-      # Step 9: Run SonarQube Analysis (Including Coverage)
+      # Step 10: Build and Analyze with SonarQube
       - name: Build and analyze with SonarQube
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -84,5 +94,24 @@ jobs:
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
 
+   
 
-    
+      # Step 12: Set up Docker
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Set up Docker Credentials
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # Step 13: Build Docker Image
+      - name: Build Docker Image
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/file-storage:latest .
+
+      # Step 14: Push Docker Image to Docker Hub
+      - name: Push Docker Image to Docker Hub
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/file-storage:latest
