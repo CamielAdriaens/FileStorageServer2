@@ -49,13 +49,13 @@ jobs:
             --no-build --configuration Release \
             --collect:"XPlat Code Coverage"
         # Step 6: Generate Code Coverage Report
-- name: Generate Coverage Report
-  run: |
-    dotnet tool install -g dotnet-reportgenerator-globaltool
-    export PATH="$PATH:~/.dotnet/tools" # Ensure global tools are accessible
-    reportgenerator -reports:TestResults/**/*.xml -targetdir:coverage-report
-  env:
-    DOTNET_CLI_HOME: ${{ runner.temp }} # Prevent permission issues
+      - name: Generate Coverage Report
+        run: |
+          dotnet tool install -g dotnet-reportgenerator-globaltool
+          export PATH="$PATH:~/.dotnet/tools" # Ensure global tools are accessible
+          reportgenerator -reports:TestResults/**/*.xml -targetdir:coverage-report
+        env:
+          DOTNET_CLI_HOME: ${{ runner.temp }} # Prevent permission issues
 
       # Step 7: Cache SonarQube Scanner
       - name: Cache SonarQube Cloud scanner
