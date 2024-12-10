@@ -48,10 +48,14 @@ jobs:
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
             --no-build --configuration Release \
             /p:CollectCoverage=true \
-            /p:CoverletOutputFormat=cobertura \
-            /p:CoverletOutput=TestResults/coverage.cobertura.xml
+            /p:CoverletOutput=TestResults/coverage/ \
+            /p:CoverletOutputFormat=cobertura
 
-      # Step 6: Cache SonarQube Cloud Scanner
+      # Step 6: Verify Coverage Files (Optional - for Debugging)
+      - name: List Coverage Files
+        run: ls -R TestResults/coverage/
+
+      # Step 7: Cache SonarQube Cloud Scanner
       - name: Cache SonarQube Cloud scanner
         id: cache-sonar-scanner
         uses: actions/cache@v4
@@ -60,14 +64,14 @@ jobs:
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
 
-      # Step 7: Install SonarQube Scanner if Not Cached
+      # Step 8: Install SonarQube Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
 
-      # Step 8: Build and Analyze with SonarQube
+      # Step 9: Build and Analyze with SonarQube
       - name: Build and analyze with SonarQube
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -78,14 +82,14 @@ jobs:
             /o:"camieladriaens" \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
             /d:sonar.host.url="https://sonarcloud.io" \
-            /d:sonar.cs.opencover.reportsPaths="TestResults/coverage.cobertura.xml"
+            /d:sonar.cs.opencover.reportsPaths="TestResults/coverage/coverage.cobertura.xml"
           dotnet build FileStorage.sln --configuration Release
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
 
-      # Step 9: Upload Coverage Report
+      # Step 10: Upload Coverage Report
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v3
         with:
           name: code-coverage-report
-          path: TestResults/coverage.cobertura.xml
+          path: TestResults/coverage/coverage.cobertura.xml
