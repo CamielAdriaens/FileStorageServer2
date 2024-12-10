@@ -51,10 +51,7 @@ jobs:
             /p:CoverletOutput=TestResults/coverage/ \
             /p:CoverletOutputFormat=cobertura
 
-      # Step 6: Verify Coverage Files (Optional - for Debugging)
-      - name: List Coverage Files
-        run: ls -R TestResults/coverage/
-
+ 
       # Step 7: Connect to VPN (Cisco AnyConnect)
       - name: Connect to VPN
         run: |
