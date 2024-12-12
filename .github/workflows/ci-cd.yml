@@ -51,16 +51,6 @@ jobs:
             /p:CoverletOutput=TestResults/coverage/ \
             /p:CoverletOutputFormat=cobertura
 
-      # Step 6: Connect to VPN (Cisco AnyConnect)
-      - name: Install OpenConnect
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y openconnect
-
-      - name: Connect to VPN
-        run: |
-          echo ${{ secrets.VPN_PASSWORD }} | sudo openconnect --user="${{ secrets.VPN_USERNAME }}" --passwd-on-stdin vdi.fhict.nl
-
       - name: Wait for VPN Connection
         run: sleep 10 # Wait for the VPN connection to establish before proceeding.
 
