@@ -78,12 +78,12 @@ jobs:
       # Step 10: Build Docker Image
       - name: Build Docker Image
         run: |
-          docker build -t myusername/myapp:${{ github.sha }} .
+          docker build -t camieladriaen/myapp:${{ github.sha }} .
 
       # Step 11: Push Docker Image to Docker Hub
       - name: Push Docker Image to Docker Hub
         run: |
-          docker push myusername/myapp:${{ github.sha }}
+          docker push camieladriaen/myapp:${{ github.sha }}
 
       # Step 12: Cache SonarQube Cloud scanner
       - name: Cache SonarQube Cloud scanner
