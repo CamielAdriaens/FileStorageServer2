@@ -93,6 +93,17 @@ jobs:
           path: ./.sonar/scanner
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
+          # Step 12: Deploy Watchtower
+      - name: Deploy Watchtower
+        run: |
+          docker run -d \
+            --name watchtower \
+            --restart always \
+            -e WATCHTOWER_CLEANUP=true \
+            -e WATCHTOWER_POLL_INTERVAL=30 \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            containrrr/watchtower \
+            camieladriaen/myapp
 
       # Step 13: Install SonarQube Cloud scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
