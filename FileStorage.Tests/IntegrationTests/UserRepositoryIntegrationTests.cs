@@ -35,7 +35,7 @@ namespace FileStorage.Tests.IntegrationTests
             var result = await _userRepository.CreateUser(user);
 
             // Assert
-            var retrievedUser = await _context.Users.FindAsync(result.Id);
+            var retrievedUser = await _context.Users.FindAsync(result.UserId);
             Assert.Equal("google-id", retrievedUser.GoogleId);
         }
 

@@ -11,5 +11,12 @@ namespace INTERFACES
         Task AddUserFile(UserFile file);
         Task<List<UserFile>> GetUserFiles(string googleId);
         Task RemoveUserFile(int userId, string mongoFileId); // Add this method
+        Task<User> GetUserByEmail(string email);
+        Task AddFileShare(PendingFileShare shareRequest);
+        Task<PendingFileShare> GetFileShareById(int shareId);
+        Task AcceptFileShare(PendingFileShare shareRequest);
+        Task RemoveFileShareAsync(PendingFileShare share);
+        Task<List<PendingFileShare>> GetPendingFileSharesForUserAsync(int userId);
+        Task<UserFile> GetFileByMongoFileId(string mongoFileId);
     }
 }

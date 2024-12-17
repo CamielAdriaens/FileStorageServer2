@@ -26,7 +26,7 @@ namespace LOGIC
             {
                 fileInfos.Add(new
                 {
-                    Id = file.Id.ToString(),
+                    FileId = file.Id.ToString(),
                     FileName = file.Filename,
                     UploadDate = file.UploadDateTime,
                     file.Length

@@ -6,6 +6,8 @@ using System.IO;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using INTERFACES;
+using Microsoft.EntityFrameworkCore;
+using MODELS;
 
 
 namespace DAL
@@ -26,6 +28,7 @@ namespace DAL
             _database = client.GetDatabase(settings.Value.DatabaseName);
             _gridFsBucket = new GridFSBucket(_database);
         }
+       
 
         public async Task<List<GridFSFileInfo>> GetFilesAsync()
         {

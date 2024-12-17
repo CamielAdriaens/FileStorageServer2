@@ -76,7 +76,7 @@ namespace FileStorage.Tests.UnitTests
             var googleId = "google-id";
             var mongoFileId = "mongo-file-id";
             var fileName = "file.txt";
-            var user = new User { Id = 1, GoogleId = googleId };
+            var user = new User { UserId = 1, GoogleId = googleId };
             _userRepositoryMock.Setup(repo => repo.GetUserByGoogleId(googleId)).ReturnsAsync(user);
 
             // Act
@@ -92,14 +92,14 @@ namespace FileStorage.Tests.UnitTests
             // Arrange
             var googleId = "google-id";
             var mongoFileId = "mongo-file-id";
-            var user = new User { Id = 1, GoogleId = googleId };
+            var user = new User { UserId = 1, GoogleId = googleId };
             _userRepositoryMock.Setup(repo => repo.GetUserByGoogleId(googleId)).ReturnsAsync(user);
 
             // Act
             await _userService.RemoveUserFileAsync(googleId, mongoFileId);
 
             // Assert
-            _userRepositoryMock.Verify(repo => repo.RemoveUserFile(user.Id, mongoFileId), Times.Once);
+            _userRepositoryMock.Verify(repo => repo.RemoveUserFile(user.UserId, mongoFileId), Times.Once);
         }
     }
 }

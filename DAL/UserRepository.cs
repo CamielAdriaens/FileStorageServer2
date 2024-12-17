@@ -22,6 +22,11 @@ namespace DAL
                 .Include(u => u.UserFiles)
                 .FirstOrDefaultAsync(u => u.GoogleId == googleId);
         }
+        public async Task<UserFile> GetFileByMongoFileId(string mongoFileId)
+        {
+            return await _context.UserFiles
+                .FirstOrDefaultAsync(file => file.MongoFileId == mongoFileId);
+        }
 
         public async Task<User> CreateUser(User user)
         {
@@ -30,7 +35,7 @@ namespace DAL
                 Console.WriteLine("Attempting to add user to database...");
                 _context.Users.Add(user);
                 await _context.SaveChangesAsync();
-                Console.WriteLine($"User with Google ID {user.GoogleId} saved to database with ID {user.Id}.");
+                Console.WriteLine($"User with Google ID {user.GoogleId} saved to database with ID {user.UserId}.");
                 return user;
             }
             catch (Exception ex)
@@ -66,5 +71,40 @@ namespace DAL
                 await _context.SaveChangesAsync();
             }
         }
+        public async Task<User> GetUserByEmail(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        }
+
+        public async Task AddFileShare(PendingFileShare shareRequest)
+        {
+            _context.PendingFileShares.Add(shareRequest);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<PendingFileShare> GetFileShareById(int shareId)
+        {
+            return await _context.PendingFileShares
+                .Include(s => s.File)
+                .FirstOrDefaultAsync(s => s.ShareId == shareId);
+        }
+
+        public async Task AcceptFileShare(PendingFileShare shareRequest)
+        {
+            shareRequest.IsAccepted = true;
+            await _context.SaveChangesAsync();
+        }
+        public async Task RemoveFileShareAsync(PendingFileShare share)
+        {
+            _context.PendingFileShares.Remove(share);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<List<PendingFileShare>> GetPendingFileSharesForUserAsync(int userId)
+        {
+            return await _context.PendingFileShares
+                .Where(s => s.RecipientUserId == userId && !s.IsAccepted && !s.IsAccepted==false)
+                .ToListAsync();
+        }
+
     }
 }

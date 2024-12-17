@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "FileStorage.Controllers.FilesController",
+    "Method": "AcceptShare",
+    "RelativePath": "api/Files/accept-share/{shareId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shareId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileStorage.Controllers.FilesController",
     "Method": "DeleteFile",
     "RelativePath": "api/Files/delete/{id}",
     "HttpMethod": "DELETE",
@@ -49,12 +65,54 @@
   },
   {
     "ContainingType": "FileStorage.Controllers.FilesController",
+    "Method": "GetPendingShares",
+    "RelativePath": "api/Files/pending-shares",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileStorage.Controllers.FilesController",
+    "Method": "RefuseShare",
+    "RelativePath": "api/Files/refuse-share/{shareId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shareId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileStorage.Controllers.FilesController",
     "Method": "GetUserFiles",
     "RelativePath": "api/Files/secure-files",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileStorage.Controllers.FilesController",
+    "Method": "ShareFile",
+    "RelativePath": "api/Files/share-file",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "DTOs.ShareFileRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

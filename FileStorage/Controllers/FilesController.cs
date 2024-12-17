@@ -117,5 +117,74 @@ namespace FileStorage.Controllers
 
             return NoContent();
         }
+        [HttpGet("pending-shares")]
+        public async Task<IActionResult> GetPendingShares()
+        {
+            var googleId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (googleId == null)
+            {
+                Console.WriteLine("Google ID not found in user claims.");
+                return Unauthorized("Google ID not found");
+            }
+
+            try
+            {
+                var pendingShares = await _userService.GetPendingSharesAsync(googleId);
+                return Ok(pendingShares);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error retrieving pending shares for user {googleId}: {ex.Message}");
+                return StatusCode(500, "Internal server error while retrieving pending shares.");
+            }
+        }
+        [HttpPost("share-file")]
+        public async Task<IActionResult> ShareFile([FromBody] ShareFileRequest request)
+        {
+            var googleId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (googleId == null)
+                return Unauthorized("Google ID not found");
+
+            try
+            {
+                await _userService.ShareFileAsync(googleId, request.RecipientEmail, request.FileName, request.MongoFileId);
+                return Ok("File shared successfully.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("accept-share/{shareId}")]
+        public async Task<IActionResult> AcceptShare(int shareId)
+        {
+            try
+            {
+                await _userService.AcceptFileShareAsync(shareId);
+                return Ok("File share accepted.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("refuse-share/{shareId}")]
+        public async Task<IActionResult> RefuseShare(int shareId)
+        {
+            try
+            {
+                await _userService.RefuseFileShareAsync(shareId);
+                return Ok("File share refused.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

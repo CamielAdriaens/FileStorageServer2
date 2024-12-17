@@ -1,8 +1,13 @@
-﻿namespace MODELS
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MODELS
 {
     public class User
     {
-        public int Id { get; set; }
+        [Key]
+        
+        public int UserId { get; set; }
         public string GoogleId { get; set; } // Google ID from the token
         public string Email { get; set; }
         public string Name { get; set; }
