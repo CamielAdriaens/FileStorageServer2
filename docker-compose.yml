@@ -14,7 +14,9 @@ services:
       VPN_PASSWORD: Eqp40XwOw5
       SQL_CONNECTION_STRING: "Server=mssqlstud.fhict.local;Database=dbi472595;User Id=dbi472595;Password=database;MultipleActiveResultSets=true;TrustServerCertificate=True"
       MONGODB_CONNECTION_STRING: "mongodb+srv://472595:mongodatabase@clusterfilestorage.en7np.mongodb.net/?retryWrites=true&w=majority&appName=ClusterFileStorage&authMechanism=SCRAM-SHA-1"
-    volumes:
-      - ./vpn-connect.sh:/app/vpn-connect.sh  # Mount the VPN script
+
+      volumes:
+      - ./dataProtectionKeys:/root/.aspnet/DataProtection-Keys
+
     command: ["/app/vpn-connect.sh"]  # Execute the script as the entrypoint
     restart: always  # Automatically restart the container on failure
