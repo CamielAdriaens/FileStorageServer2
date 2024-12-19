@@ -49,12 +49,23 @@ jobs:
             --no-build --configuration Release \
             /p:CollectCoverage=true \
             /p:CoverletOutput=TestResults/coverage/ \
-            /p:CoverletOutputFormat=cobertura
+            /p:CoverletOutputFormat=cobertura \
+            --verbosity normal
 
-      - name: Wait for VPN Connection
-        run: sleep 10 # Wait for the VPN connection to establish before proceeding.
+      # Step 6: Upload Test and Coverage Results
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: TestResults/
 
-      # Step 7: Docker Build and Push
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: TestResults/coverage/coverage.cobertura.xml
+
+      # Step 7: Docker Setup and Deployment
       - name: Check Docker Version
         run: docker --version
 
@@ -85,15 +96,7 @@ jobs:
         run: |
           docker push camieladriaen/myapp:${{ github.sha }}
 
-      # Step 12: Cache SonarQube Cloud scanner
-      - name: Cache SonarQube Cloud scanner
-        id: cache-sonar-scanner
-        uses: actions/cache@v4
-        with:
-          path: ./.sonar/scanner
-          key: ${{ runner.os }}-sonar-scanner
-          restore-keys: ${{ runner.os }}-sonar-scanner
-          # Step 12: Deploy Watchtower
+      # Step 12: Deploy Watchtower
       - name: Deploy Watchtower
         run: |
           docker run -d \
@@ -105,14 +108,23 @@ jobs:
             containrrr/watchtower \
             camieladriaen/myapp
 
-      # Step 13: Install SonarQube Cloud scanner if Not Cached
+      # Step 13: Cache SonarQube Cloud scanner
+      - name: Cache SonarQube Cloud scanner
+        id: cache-sonar-scanner
+        uses: actions/cache@v4
+        with:
+          path: ./.sonar/scanner
+          key: ${{ runner.os }}-sonar-scanner
+          restore-keys: ${{ runner.os }}-sonar-scanner
+
+      # Step 14: Install SonarQube Cloud scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
 
-      # Step 14: Build and analyze with SonarQube
+      # Step 15: Build and analyze with SonarQube
       - name: Build and analyze with SonarQube
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
