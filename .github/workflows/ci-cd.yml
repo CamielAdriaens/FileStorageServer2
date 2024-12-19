@@ -45,16 +45,36 @@ jobs:
       # Step 5: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
         run: |
+          mkdir -p TestResults/coverage
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
             --no-build --configuration Release \
             /p:CollectCoverage=true \
             /p:CoverletOutput=TestResults/coverage/ \
-            /p:CoverletOutputFormat=cobertura
+            /p:CoverletOutputFormat=cobertura \
+            --verbosity normal
 
-      - name: Wait for VPN Connection
-        run: sleep 10 # Wait for the VPN connection to establish before proceeding.
+      # Step 6: Debug Test Results and Coverage
+      - name: List Test Results and Coverage Files
+        run: |
+          echo "Listing TestResults directory contents:"
+          ls -R TestResults
+          echo "Listing TestResults/coverage directory contents:"
+          ls -R TestResults/coverage
 
-      # Step 7: Docker Build and Push
+      # Step 7: Upload Test and Coverage Results
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: TestResults/
+
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: TestResults/coverage/coverage.cobertura.xml
+
+      # Step 8: Docker Build and Push
       - name: Check Docker Version
         run: docker --version
 
@@ -64,28 +84,28 @@ jobs:
       - name: List Running Docker Containers
         run: docker ps
 
-      # Step 8: Set up Docker Buildx
+      # Step 9: Set up Docker Buildx
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      # Step 9: Log in to Docker Hub
+      # Step 10: Log in to Docker Hub
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # Step 10: Build Docker Image
+      # Step 11: Build Docker Image
       - name: Build Docker Image
         run: |
           docker build -t camieladriaen/myapp:${{ github.sha }} .
 
-      # Step 11: Push Docker Image to Docker Hub
+      # Step 12: Push Docker Image to Docker Hub
       - name: Push Docker Image to Docker Hub
         run: |
           docker push camieladriaen/myapp:${{ github.sha }}
 
-      # Step 12: Cache SonarQube Cloud scanner
+      # Step 13: Cache SonarQube Cloud Scanner
       - name: Cache SonarQube Cloud scanner
         id: cache-sonar-scanner
         uses: actions/cache@v4
@@ -93,26 +113,15 @@ jobs:
           path: ./.sonar/scanner
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
-          # Step 12: Deploy Watchtower
-      - name: Deploy Watchtower
-        run: |
-          docker run -d \
-            --name watchtower \
-            --restart always \
-            -e WATCHTOWER_CLEANUP=true \
-            -e WATCHTOWER_POLL_INTERVAL=30 \
-            -v /var/run/docker.sock:/var/run/docker.sock \
-            containrrr/watchtower \
-            camieladriaen/myapp
 
-      # Step 13: Install SonarQube Cloud scanner if Not Cached
+      # Step 14: Install SonarQube Cloud Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
 
-      # Step 14: Build and analyze with SonarQube
+      # Step 15: Build and Analyze with SonarQube
       - name: Build and analyze with SonarQube
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -127,3 +136,15 @@ jobs:
           dotnet build FileStorage.sln --configuration Release
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+
+      # Step 16: Deploy Watchtower
+      - name: Deploy Watchtower
+        run: |
+          docker run -d \
+            --name watchtower \
+            --restart always \
+            -e WATCHTOWER_CLEANUP=true \
+            -e WATCHTOWER_POLL_INTERVAL=30 \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            containrrr/watchtower \
+            camieladriaen/myapp
