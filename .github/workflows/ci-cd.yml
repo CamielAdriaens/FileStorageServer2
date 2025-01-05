@@ -42,13 +42,10 @@ jobs:
       - name: Build the solution
         run: dotnet build FileStorage.sln --configuration Release
 
-      # Step 5: Install Coverlet and run tests with coverage
+      # Step 5: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
         run: |
-          # Install Coverlet for coverage collection
-          dotnet tool install --global coverlet.console
-
-          # Run tests with coverage and send results to SonarCloud
+          # Run tests with coverage collection enabled for SonarCloud
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
             --no-build --configuration Release \
             --collect:"XPlat Code Coverage" \
