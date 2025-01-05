@@ -52,6 +52,10 @@ jobs:
             /p:CoverletOutput=TestResults/coverage/ \
             /p:CoverletOutputFormat=opencover \
             --verbosity normal
+          
+          # List the contents of TestResults/coverage/ to verify if the file was created
+          echo "Listing contents of TestResults/coverage/"
+          ls -l TestResults/coverage/
 
       # Step 6: Debug Test Results and Coverage Files
       - name: List TestResults Directory
@@ -70,13 +74,17 @@ jobs:
         with:
           name: test-results
           path: TestResults/
+          if-no-files-found: warn
+          include-hidden-files: false
 
       # Step 8: Upload Coverage Report
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v3
         with:
           name: coverage-report
-          path: TestResults/coverage/
+          path: TestResults/coverage/coverage.opencover.xml
+          if-no-files-found: warn
+          include-hidden-files: false
 
       # Step 9: Cache SonarQube Cloud Scanner
       - name: Cache SonarQube Cloud scanner
