@@ -46,15 +46,16 @@ jobs:
       - name: Run Unit Tests with Code Coverage
         run: |
           mkdir -p TestResults/coverage  # Ensure the coverage folder exists
+
+          # Run the tests and generate coverage in the 'opencover' format
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
             --no-build --configuration Release \
             /p:CollectCoverage=true \
             /p:CoverletOutput=TestResults/coverage/ \
             /p:CoverletOutputFormat=opencover \
             --verbosity normal
-          
-          # List the contents of TestResults/coverage/ to verify if the file was created
-          echo "Listing contents of TestResults/coverage/"
+
+          # List contents of the coverage folder to verify coverage file is there
           ls -l TestResults/coverage/
 
       # Step 6: Debug Test Results and Coverage Files
