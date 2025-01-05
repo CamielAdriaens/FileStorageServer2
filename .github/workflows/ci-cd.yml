@@ -42,26 +42,26 @@ jobs:
       - name: Build the solution
         run: dotnet build FileStorage.sln --configuration Release
 
-      # Step 5: Run Unit Tests with Code Coverage
+      # Step 5: Install Coverlet and run tests with coverage
       - name: Run Unit Tests with Code Coverage
         run: |
-          mkdir -p TestResults/coverage  # Ensure the coverage folder exists
+          # Install Coverlet for coverage collection
+          dotnet tool install --global coverlet.console
 
-          # Run the tests and collect coverage in 'cobertura' format
+          # Run tests with coverage and send results to SonarCloud
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
             --no-build --configuration Release \
-            /p:CollectCoverage=true \
-            /p:CoverletOutput=TestResults/coverage/ \
-            /p:CoverletOutputFormat=cobertura \
-            --verbosity normal
+            --collect:"XPlat Code Coverage" \
+            /p:SonarQube=true \
+            /p:sonar.coverageReportPaths="TestResults/*/coverage.cobertura.xml"
 
-      # Step 6: Install SonarQube Cloud Scanner if Not Cached
+      # Step 6: Install SonarQube Cloud Scanner
       - name: Install SonarQube Cloud scanner if not cached
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
 
-      # Step 7: SonarQube Analysis (with coverage report directly sent to SonarCloud)
+      # Step 7: SonarQube Analysis (direct to SonarCloud)
       - name: Run SonarQube analysis
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -72,7 +72,7 @@ jobs:
             /o:"camieladriaens" \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
             /d:sonar.host.url="https://sonarcloud.io" \
-            /d:sonar.cs.cobertura.reportsPaths="TestResults/coverage/coverage.cobertura.xml"
+            /d:sonar.verbose=true
           
           # Build the project after the sonar scanner begins
           dotnet build FileStorage.sln --configuration Release
