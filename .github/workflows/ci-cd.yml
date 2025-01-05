@@ -45,36 +45,40 @@ jobs:
       # Step 5: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
         run: |
-          mkdir -p TestResults/coverage
+          mkdir -p TestResults/coverage  # Ensure the coverage folder exists
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
             --no-build --configuration Release \
             /p:CollectCoverage=true \
             /p:CoverletOutput=TestResults/coverage/ \
-            /p:CoverletOutputFormat=cobertura \
+            /p:CoverletOutputFormat=opencover \
             --verbosity normal
 
-      # Step 6: Debug Test Results and Coverage
-      - name: List Test Results and Coverage Files
+      # Step 6: Debug Test Results and Coverage Files
+      - name: List TestResults Directory
         run: |
-          echo "Listing TestResults directory contents:"
-          ls -R TestResults
-          echo "Listing TestResults/coverage directory contents:"
-          ls -R TestResults/coverage
+          echo "Listing contents of TestResults/ directory"
+          ls -R TestResults/
 
-      # Step 7: Upload Test and Coverage Results
+      - name: List Coverage Directory
+        run: |
+          echo "Listing contents of TestResults/coverage/ directory"
+          ls -R TestResults/coverage/
+
+      # Step 7: Upload Test Results
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: TestResults/
 
+      # Step 8: Upload Coverage Report
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v3
         with:
           name: coverage-report
-          path: TestResults/coverage/coverage.cobertura.xml
+          path: TestResults/coverage/
 
-      # Step 13: Cache SonarQube Cloud Scanner
+      # Step 9: Cache SonarQube Cloud Scanner
       - name: Cache SonarQube Cloud scanner
         id: cache-sonar-scanner
         uses: actions/cache@v4
@@ -83,14 +87,14 @@ jobs:
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
 
-      # Step 14: Install SonarQube Cloud Scanner if Not Cached
+      # Step 10: Install SonarQube Cloud Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
 
-      # Step 15: Build and Analyze with SonarQube
+      # Step 11: Build and Analyze with SonarQube
       - name: Build and analyze with SonarQube
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -101,7 +105,7 @@ jobs:
             /o:"camieladriaens" \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
             /d:sonar.host.url="https://sonarcloud.io" \
-            /d:sonar.cs.opencover.reportsPaths="TestResults/coverage/coverage.cobertura.xml"
+            /d:sonar.cs.opencover.reportsPaths="TestResults/coverage/coverage.opencover.xml"
           dotnet build FileStorage.sln --configuration Release
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
