@@ -41,6 +41,35 @@ jobs:
       # Step 4: Build the Solution
       - name: Build the solution
         run: dotnet build FileStorage.sln --configuration Release
+        # Step 7: Docker Build and Push
+      - name: Check Docker Version
+        run: docker --version
+
+      - name: List Docker Images
+        run: docker images
+
+      - name: List Running Docker Containers
+        run: docker ps
+
+      # Step 8: Set up Docker Buildx
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      # Step 9: Log in to Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # Step 10: Build Docker Image
+      - name: Build Docker Image
+        run: |
+          docker build -t camieladriaen/myapp:${{ github.sha }} .
+      # Step 11: Push Docker Image to Docker Hub
+      - name: Push Docker Image to Docker Hub
+        run: |
+          docker push camieladriaen/filestorageserverapp:${{ github.sha }}
 
       # Step 5: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
@@ -104,22 +133,4 @@ jobs:
             /d:sonar.cs.opencover.reportsPaths="TestResults/coverage/coverage.opencover.xml"
           dotnet build FileStorage.sln --configuration Release
           ./.sonar/scanner/dotnet-sonarscanner end \
-            /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-
-      # Step 12: Log in to Docker Hub
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-
-    
-
-      # Step 14: Build and Push Backend Docker Image
-      - name: Build and Push Backend Docker Image
-        uses: docker/build-push-action@v4
-        with:
-          context: ./FileStorageServer2
-          file: ./FileStorageServer2/Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/filestorageserverapp:latest
+     
