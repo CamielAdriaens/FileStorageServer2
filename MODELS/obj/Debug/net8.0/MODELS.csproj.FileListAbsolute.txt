@@ -1,6 +1,8 @@
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\bin\Debug\net8.0\MODELS.deps.json
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\bin\Debug\net8.0\MODELS.runtimeconfig.json
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\bin\Debug\net8.0\MODELS.dll
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\bin\Debug\net8.0\MODELS.pdb
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\MODELS.csproj.AssemblyReference.cache
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\MODELS.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\MODELS.AssemblyInfoInputs.cache
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\MODELS.AssemblyInfo.cs
@@ -9,7 +11,5 @@ C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\MODEL
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\MODELS.dll
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\refint\MODELS.dll
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\MODELS.pdb
-C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\ref\MODELS.dll
-C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\bin\Debug\net8.0\MODELS.runtimeconfig.json
-C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\MODELS.csproj.AssemblyReference.cache
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\MODELS.genruntimeconfig.cache
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\MODELS\obj\Debug\net8.0\ref\MODELS.dll

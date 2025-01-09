@@ -6,13 +6,10 @@ namespace MODELS
     public class PendingFileShare
     {
         [Key]
-        
-
         public int ShareId { get; set; } // SQL Primary Key
         public string MongoFileId { get; set; } // Foreign key reference to UserFile
         public UserFile File { get; set; }
         public int FileId { get; set; }
-
         public string FileName { get; set; }
         public int SenderUserId { get; set; } // User who is sharing the file
         public User SenderUser { get; set; }

@@ -1476,6 +1476,12 @@
           }
         }
       },
+      "MicrosoftWebMvc/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Mvc2Futures": "2.0.50217"
+        }
+      },
       "Mongo2Go/3.1.3": {
         "type": "package",
         "dependencies": {
@@ -1636,6 +1642,44 @@
           "lib/net6.0/Moq.dll": {}
         }
       },
+      "Mvc2Futures/2.0.50217": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.Web.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.Web.Mvc.dll": {}
+        }
+      },
+      "MvcContrib/2.0.95": {
+        "type": "package",
+        "dependencies": {
+          "MicrosoftWebMvc": "2.0.0"
+        },
+        "compile": {
+          "lib/MvcContrib.dll": {}
+        },
+        "runtime": {
+          "lib/MvcContrib.dll": {}
+        }
+      },
+      "MvcContrib.TestHelper/2.0.95": {
+        "type": "package",
+        "dependencies": {
+          "MvcContrib": "2.0.95",
+          "RhinoMocks": "3.6.0"
+        },
+        "compile": {
+          "lib/net/MvcContrib.TestHelper.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net/MvcContrib.TestHelper.dll": {
+            "related": ".XML"
+          }
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -1705,6 +1749,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
+        }
+      },
+      "RhinoMocks/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/Rhino.Mocks.dll": {}
+        },
+        "runtime": {
+          "lib/Rhino.Mocks.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -6637,6 +6690,17 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "MicrosoftWebMvc/2.0.0": {
+      "sha512": "WHtS0VfGs4f+YYUdd3fJVCrOPyR4xY8a4aGG4vfAXdRqyZ8pzatbwzbH4l+bdo7W5O50j/lO0Vt3relZJQQ8bw==",
+      "type": "package",
+      "path": "microsoftwebmvc/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "microsoftwebmvc.2.0.0.nupkg.sha512",
+        "microsoftwebmvc.nuspec"
+      ]
+    },
     "Mongo2Go/3.1.3": {
       "sha512": "89SY5GkVVIj+wo7BcPfJQyeAU8CsQ5om0lZb4WjCQZsAxEUwW+j8SMl2gRFx2XdGeq8R3bEf4truM1WI8FkWRQ==",
       "type": "package",
@@ -6827,6 +6891,44 @@
         "readme.md"
       ]
     },
+    "Mvc2Futures/2.0.50217": {
+      "sha512": "90ilYxgj4s82mfgVegs6NujfBw5zbR49SlIWW/vtjRXu6Trdi9W1xh/LlHu6or47IeBI2AhGKsqnfm7HFCBBlA==",
+      "type": "package",
+      "path": "mvc2futures/2.0.50217",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.Web.Mvc.dll",
+        "mvc2futures.2.0.50217.nupkg.sha512",
+        "mvc2futures.nuspec"
+      ]
+    },
+    "MvcContrib/2.0.95": {
+      "sha512": "+vqMMmiGbn+rdFBGEo691A3aZr7OHUp3doXghpizilqbIYhZk49bnEI8hoZV4Apm/9tVx9epj1EbgCAK99W3+Q==",
+      "type": "package",
+      "path": "mvccontrib/2.0.95",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MvcContrib.XML",
+        "lib/MvcContrib.dll",
+        "mvccontrib.2.0.95.nupkg.sha512",
+        "mvccontrib.nuspec"
+      ]
+    },
+    "MvcContrib.TestHelper/2.0.95": {
+      "sha512": "sl/KeMNvovjp+0Qn9hAbRQ1AWxl6bMSln9P084rFCgs4H2vAGBbFHE6rSTsPDyHib71FgDeco9KENS9ck2qrQw==",
+      "type": "package",
+      "path": "mvccontrib.testhelper/2.0.95",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net/MvcContrib.TestHelper.XML",
+        "lib/net/MvcContrib.TestHelper.dll",
+        "mvccontrib.testhelper.2.0.95.nupkg.sha512",
+        "mvccontrib.testhelper.nuspec"
+      ]
+    },
     "NETStandard.Library/1.6.1": {
       "sha512": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "type": "package",
@@ -6883,6 +6985,18 @@
         "lib/netstandard2.0/NuGet.Frameworks.dll",
         "nuget.frameworks.6.5.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "RhinoMocks/3.6.0": {
+      "sha512": "F1hgz7t5oCBLatl4Oc+gEtbDNs5Zafe5v6XjDqiJtHI/gFKSnnu3ENWgZEFDCC4pEMya/mynXusfWz5VnYV5Gw==",
+      "type": "package",
+      "path": "rhinomocks/3.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Rhino.Mocks.dll",
+        "rhinomocks.3.6.0.nupkg.sha512",
+        "rhinomocks.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -11551,14 +11665,14 @@
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "Moq >= 4.20.72",
+      "MvcContrib.TestHelper >= 2.0.95",
       "coverlet.collector >= 6.0.0",
       "xunit >= 2.5.3",
       "xunit.runner.visualstudio >= 2.5.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Camil\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Camil\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -11569,12 +11683,8 @@
       "packagesPath": "C:\\Users\\Camil\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\Camil\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11582,7 +11692,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11643,6 +11752,10 @@
             "target": "Package",
             "version": "[4.20.72, )"
           },
+          "MvcContrib.TestHelper": {
+            "target": "Package",
+            "version": "[2.0.95, )"
+          },
           "coverlet.collector": {
             "target": "Package",
             "version": "[6.0.0, )"
@@ -11672,8 +11785,50 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Mvc2Futures 2.0.50217' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Mvc2Futures",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MvcContrib 2.0.95' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MvcContrib",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MvcContrib.TestHelper 2.0.95' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MvcContrib.TestHelper",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RhinoMocks 3.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RhinoMocks",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

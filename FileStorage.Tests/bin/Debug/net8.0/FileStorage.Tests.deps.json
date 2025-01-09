@@ -18,6 +18,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "9.0.0",
           "Microsoft.NET.Test.Sdk": "17.8.0",
           "Moq": "4.20.72",
+          "MvcContrib.TestHelper": "2.0.95",
           "coverlet.collector": "6.0.0",
           "xunit": "2.5.3",
           "xunit.runner.visualstudio": "2.5.3"
@@ -1131,6 +1132,11 @@
           }
         }
       },
+      "MicrosoftWebMvc/2.0.0": {
+        "dependencies": {
+          "Mvc2Futures": "2.0.50217"
+        }
+      },
       "Mongo2Go/3.1.3": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
@@ -1249,6 +1255,37 @@
           }
         }
       },
+      "Mvc2Futures/2.0.50217": {
+        "runtime": {
+          "lib/Microsoft.Web.Mvc.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.50217.0"
+          }
+        }
+      },
+      "MvcContrib/2.0.95": {
+        "dependencies": {
+          "MicrosoftWebMvc": "2.0.0"
+        },
+        "runtime": {
+          "lib/MvcContrib.dll": {
+            "assemblyVersion": "2.0.95.0",
+            "fileVersion": "2.0.95.0"
+          }
+        }
+      },
+      "MvcContrib.TestHelper/2.0.95": {
+        "dependencies": {
+          "MvcContrib": "2.0.95",
+          "RhinoMocks": "3.6.0"
+        },
+        "runtime": {
+          "lib/net/MvcContrib.TestHelper.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1310,6 +1347,14 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {
             "assemblyVersion": "6.5.0.154",
             "fileVersion": "6.5.0.154"
+          }
+        }
+      },
+      "RhinoMocks/3.6.0": {
+        "runtime": {
+          "lib/Rhino.Mocks.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
           }
         }
       },
@@ -2338,10 +2383,7 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "DAL.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "DAL.dll": {}
         }
       },
       "DTOs/1.0.0": {
@@ -2359,10 +2401,7 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "DTOs.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "DTOs.dll": {}
         }
       },
       "FileStorage/1.0.0": {
@@ -2387,10 +2426,7 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "FileStorage.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "FileStorage.dll": {}
         }
       },
       "INTERFACES/1.0.0": {
@@ -2410,10 +2446,7 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "INTERFACES.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "INTERFACES.dll": {}
         }
       },
       "LOGIC/1.0.0": {
@@ -2435,10 +2468,7 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "LOGIC.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "LOGIC.dll": {}
         }
       },
       "MODELS/1.0.0": {
@@ -2446,10 +2476,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0"
         },
         "runtime": {
-          "MODELS.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "MODELS.dll": {}
         }
       }
     }
@@ -2901,6 +2928,13 @@
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
     },
+    "MicrosoftWebMvc/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WHtS0VfGs4f+YYUdd3fJVCrOPyR4xY8a4aGG4vfAXdRqyZ8pzatbwzbH4l+bdo7W5O50j/lO0Vt3relZJQQ8bw==",
+      "path": "microsoftwebmvc/2.0.0",
+      "hashPath": "microsoftwebmvc.2.0.0.nupkg.sha512"
+    },
     "Mongo2Go/3.1.3": {
       "type": "package",
       "serviceable": true,
@@ -2957,6 +2991,27 @@
       "path": "moq/4.20.72",
       "hashPath": "moq.4.20.72.nupkg.sha512"
     },
+    "Mvc2Futures/2.0.50217": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-90ilYxgj4s82mfgVegs6NujfBw5zbR49SlIWW/vtjRXu6Trdi9W1xh/LlHu6or47IeBI2AhGKsqnfm7HFCBBlA==",
+      "path": "mvc2futures/2.0.50217",
+      "hashPath": "mvc2futures.2.0.50217.nupkg.sha512"
+    },
+    "MvcContrib/2.0.95": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+vqMMmiGbn+rdFBGEo691A3aZr7OHUp3doXghpizilqbIYhZk49bnEI8hoZV4Apm/9tVx9epj1EbgCAK99W3+Q==",
+      "path": "mvccontrib/2.0.95",
+      "hashPath": "mvccontrib.2.0.95.nupkg.sha512"
+    },
+    "MvcContrib.TestHelper/2.0.95": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sl/KeMNvovjp+0Qn9hAbRQ1AWxl6bMSln9P084rFCgs4H2vAGBbFHE6rSTsPDyHib71FgDeco9KENS9ck2qrQw==",
+      "path": "mvccontrib.testhelper/2.0.95",
+      "hashPath": "mvccontrib.testhelper.2.0.95.nupkg.sha512"
+    },
     "NETStandard.Library/1.6.1": {
       "type": "package",
       "serviceable": true,
@@ -2977,6 +3032,13 @@
       "sha512": "sha512-QWINE2x3MbTODsWT1Gh71GaGb5icBz4chS8VYvTgsBnsi8esgN6wtHhydd7fvToWECYGq7T4cgBBDiKD/363fg==",
       "path": "nuget.frameworks/6.5.0",
       "hashPath": "nuget.frameworks.6.5.0.nupkg.sha512"
+    },
+    "RhinoMocks/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F1hgz7t5oCBLatl4Oc+gEtbDNs5Zafe5v6XjDqiJtHI/gFKSnnu3ENWgZEFDCC4pEMya/mynXusfWz5VnYV5Gw==",
+      "path": "rhinomocks/3.6.0",
+      "hashPath": "rhinomocks.3.6.0.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
