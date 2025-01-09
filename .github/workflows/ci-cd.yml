@@ -22,7 +22,6 @@ jobs:
           --health-retries=5 
           -e GITHUB_ACTIONS=true 
           -e CI=true
-
     steps:
       # Step 1: Checkout Code
       - name: Checkout Code
@@ -45,20 +44,60 @@ jobs:
       # Step 5: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
         run: |
+          mkdir -p TestResults/coverage  # Ensure the coverage folder exists
+          # Run the tests and generate coverage in the 'opencover' format
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
             --no-build --configuration Release \
-            --collect:"XPlat Code Coverage" \
-            /p:SonarQube=true \
-            /p:sonar.coverageReportPaths="TestResults/*/coverage.cobertura.xml"
+            /p:CollectCoverage=true \
+            /p:CoverletOutput=TestResults/coverage/ \
+            /p:CoverletOutputFormat=opencover \
+            --verbosity normal
+          # List contents of the coverage folder to verify coverage file is there
+          ls -l TestResults/coverage/
+      # Step 6: Debug Test Results and Coverage Files
+      - name: List TestResults Directory
+        run: |
+          echo "Listing contents of TestResults/ directory"
+          ls -R TestResults/
+      - name: List Coverage Directory
+        run: |
+          echo "Listing contents of TestResults/coverage/ directory"
+          ls -R TestResults/coverage/
+      # Step 7: Upload Test Results
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: TestResults/
+          if-no-files-found: warn
+          include-hidden-files: false
 
-      # Step 6: Install SonarQube Cloud Scanner
+      # Step 8: Upload Coverage Report
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: TestResults/coverage/coverage.opencover.xml
+          if-no-files-found: warn
+          include-hidden-files: false
+
+      # Step 9: Cache SonarQube Cloud Scanner
+      - name: Cache SonarQube Cloud scanner
+        id: cache-sonar-scanner
+        uses: actions/cache@v4
+        with:
+          path: ./.sonar/scanner
+          key: ${{ runner.os }}-sonar-scanner
+          restore-keys: ${{ runner.os }}-sonar-scanner
+
+      # Step 10: Install SonarQube Cloud Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
+        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
-
-      # Step 7: SonarQube Analysis (direct to SonarCloud)
-      - name: Run SonarQube analysis
+      # Step 11: Build and Analyze with SonarQube
+      - name: Build and analyze with SonarQube
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -68,36 +107,31 @@ jobs:
             /o:"camieladriaens" \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
             /d:sonar.host.url="https://sonarcloud.io" \
-            /d:sonar.verbose=true
-          
-          # Build the project after the sonar scanner begins
+            /d:sonar.cs.opencover.reportsPaths="TestResults/coverage/coverage.opencover.xml"
           dotnet build FileStorage.sln --configuration Release
-
-          # Complete the SonarQube analysis
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-
-      # Step 8: Log in to Docker Hub
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-
-      # Step 9: Build and Push Frontend Docker Image
-      - name: Build and Push Frontend Docker Image
-        uses: docker/build-push-action@v4
-        with:
-          context: ./FileStorageClient
-          file: ./FileStorageClient/Dockerfile
-          push: true
-          tags: your-dockerhub-username/filestorageclientapp:latest
-
-      # Step 10: Build and Push Backend Docker Image
-      - name: Build and Push Backend Docker Image
-        uses: docker/build-push-action@v4
-        with:
-          context: ./FileStorageServer2
-          file: ./FileStorageServer2/Dockerfile
-          push: true
-          tags: camieladriaen/filestorageserverapp:latest
+          # Step 8: Log in to Docker Hub
+                - name: Log in to Docker Hub
+                  uses: docker/login-action@v2
+                  with:
+                    username: ${{ secrets.DOCKER_USERNAME }}
+                    password: ${{ secrets.DOCKER_PASSWORD }}
+          
+                # Step 9: Build and Push Frontend Docker Image
+                - name: Build and Push Frontend Docker Image
+                  uses: docker/build-push-action@v4
+                  with:
+                    context: ./FileStorageClient
+                    file: ./FileStorageClient/Dockerfile
+                    push: true
+                    tags: your-dockerhub-username/filestorageclientapp:latest
+          
+                # Step 10: Build and Push Backend Docker Image
+                - name: Build and Push Backend Docker Image
+                  uses: docker/build-push-action@v4
+                  with:
+                    context: ./FileStorageServer2
+                    file: ./FileStorageServer2/Dockerfile
+                    push: true
+                    tags: your-dockerhub-username/filestorageserverapp:latest
