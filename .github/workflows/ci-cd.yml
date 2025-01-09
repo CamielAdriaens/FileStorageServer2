@@ -113,14 +113,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # Step 13: Build and Push Frontend Docker Image
-      - name: Build and Push Frontend Docker Image
-        uses: docker/build-push-action@v4
-        with:
-          context: ./FileStorageClient
-          file: ./FileStorageClient/Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/filestorageclientapp:latest
+    
 
       # Step 14: Build and Push Backend Docker Image
       - name: Build and Push Backend Docker Image
