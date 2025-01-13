@@ -20,7 +20,8 @@ WORKDIR /app
 COPY --from=publish /app/publish . 
 
 
-ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_URLS=http://0.0.0.0:8080
+
 # Use ENTRYPOINT to run the application when the container starts
 
 ENTRYPOINT ["dotnet", "FileStorage.dll"]
