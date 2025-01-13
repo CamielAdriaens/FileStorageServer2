@@ -147,6 +147,13 @@ namespace FileStorage.Controllers
             if (googleId == null)
                 return Unauthorized("Google ID not found");
 
+            // Check if the recipient email matches the user's email
+            var userEmail = User.FindFirstValue(ClaimTypes.Email); // Assuming the user's email is stored as a claim
+            if (userEmail == request.RecipientEmail)
+            {
+                return BadRequest("You cannot share files with your own email.");
+            }
+
             try
             {
                 await _userService.ShareFileAsync(googleId, request.RecipientEmail, request.FileName, request.MongoFileId);
@@ -171,6 +178,7 @@ namespace FileStorage.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
 
         [HttpDelete("refuse-share/{shareId}")]
         public async Task<IActionResult> RefuseShare(int shareId)

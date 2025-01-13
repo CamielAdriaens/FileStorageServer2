@@ -18,5 +18,10 @@ namespace INTERFACES
         Task RemoveFileShareAsync(PendingFileShare share);
         Task<List<PendingFileShare>> GetPendingFileSharesForUserAsync(int userId);
         Task<UserFile> GetFileByMongoFileId(string mongoFileId);
+        Task<PendingFileShare> GetFileShareById(string fileId);
+        Task UpdateFileShare(PendingFileShare shareRequest);
+        Task<User> GetUserByUserId(int userId);
+
+
     }
 }

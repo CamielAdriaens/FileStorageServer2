@@ -15,6 +15,12 @@ namespace DAL
         {
             _context = context;
         }
+        public async Task<User> GetUserByUserId(int userId)
+        {
+            return await _context.Users
+                .Include(u => u.UserFiles) // Include related UserFiles if needed
+                .FirstOrDefaultAsync(u => u.UserId == userId);
+        }
 
         public async Task<User> GetUserByGoogleId(string googleId)
         {
@@ -102,9 +108,23 @@ namespace DAL
         public async Task<List<PendingFileShare>> GetPendingFileSharesForUserAsync(int userId)
         {
             return await _context.PendingFileShares
-                .Where(s => s.RecipientUserId == userId && !s.IsAccepted && !s.IsAccepted==false)
+                .Where(s => s.RecipientUserId == userId && s.IsAccepted == false)
                 .ToListAsync();
         }
+        public async Task<PendingFileShare> GetFileShareById(string fileId)
+        {
+            return await _context.PendingFileShares
+                                 .Where(share => share.MongoFileId == fileId)
+                                 .FirstOrDefaultAsync();
+        }
+        public async Task UpdateFileShare(PendingFileShare shareRequest)
+        {
+            _context.PendingFileShares.Update(shareRequest);
+            await _context.SaveChangesAsync();
+        }
+
+
+
 
     }
 }

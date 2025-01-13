@@ -117,13 +117,42 @@ namespace LOGIC
 
         public async Task AcceptFileShareAsync(int shareId)
         {
+            // Get the share request by its ID
             var shareRequest = await _userRepository.GetFileShareById(shareId);
 
             if (shareRequest == null)
                 throw new Exception("Share request not found");
 
-            await _userRepository.AcceptFileShare(shareRequest);
+            if (shareRequest.IsAccepted)
+                throw new Exception("File share already accepted.");
+
+            // Fetch recipient user using RecipientUserId
+            var recipientUser = await _userRepository.GetUserByUserId(shareRequest.RecipientUserId);
+            if (recipientUser == null)
+                throw new Exception("Recipient user not found.");
+
+            // Get the shared file metadata
+            var sharedFile = await _userRepository.GetFileByMongoFileId(shareRequest.MongoFileId);
+            if (sharedFile == null)
+                throw new Exception("Shared file not found.");
+
+            // Create a new UserFile record for the recipient
+            var userFile = new UserFile
+            {
+                MongoFileId = sharedFile.MongoFileId,
+                FileName = sharedFile.FileName,
+                UploadDate = DateTime.UtcNow,
+                UserId = recipientUser.UserId // Use the correct UserId from the recipient
+            };
+
+            // Add the file to the recipient's user files
+            await _userRepository.AddUserFile(userFile);
+
+            // Mark the share request as accepted
+            shareRequest.IsAccepted = true;
+            await _userRepository.UpdateFileShare(shareRequest);
         }
+
 
         public async Task RefuseFileShareAsync(int shareId)
         {
@@ -144,6 +173,54 @@ namespace LOGIC
             var pendingShares = await _userRepository.GetPendingFileSharesForUserAsync(user.UserId);
             return pendingShares;
         }
+        public async Task AddFileToUserAsync(string googleId, string fileId)
+        {
+            // Retrieve the user by GoogleId
+            var user = await _userRepository.GetUserByGoogleId(googleId);
+            if (user == null)
+            {
+                throw new Exception("User not found.");
+            }
+
+            // Retrieve the share request to get the file details
+            var shareRequest = await _userRepository.GetFileShareById(fileId);
+            if (shareRequest == null || !shareRequest.IsAccepted)
+            {
+                throw new Exception("The file share has not been accepted yet.");
+            }
+
+            // Retrieve the file based on the MongoFileId
+            var userFile = await _userRepository.GetFileByMongoFileId(shareRequest.MongoFileId);
+            if (userFile == null)
+            {
+                throw new Exception("File not found.");
+            }
+
+            // Create a new UserFile object and associate it with the current user
+            var userFileToAdd = new UserFile
+            {
+                MongoFileId = userFile.MongoFileId,
+                FileName = userFile.FileName,
+                UploadDate = DateTime.UtcNow,
+                UserId = user.UserId // The UserId of the current user
+            };
+
+            // Add the file to the user's file list
+            await _userRepository.AddUserFile(userFileToAdd);
+        }
+
+        public async Task<UserFile> GetFileByIdAsync(string fileId)
+        {
+            // Retrieve the file by its MongoFileId
+            var userFile = await _userRepository.GetFileByMongoFileId(fileId);
+            if (userFile == null)
+            {
+                throw new Exception("File not found.");
+            }
+
+            return userFile;
+        }
+
 
     }
 }

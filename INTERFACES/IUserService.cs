@@ -13,6 +13,8 @@ namespace INTERFACES
         Task AcceptFileShareAsync(int shareId);
         Task<List<PendingFileShare>> GetPendingSharesAsync(string googleId);
         Task RefuseFileShareAsync(int shareId);
+        Task AddFileToUserAsync(string googleId, string fileId);
+        Task<UserFile> GetFileByIdAsync(string fileId);
 
     }
 }
