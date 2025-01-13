@@ -6771,19 +6771,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Camil\\.nuget\\packages\\": {}
+    "C:\\Users\\Camil\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\INTERFACES.csproj",
+      "projectUniqueName": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\INTERFACES.csproj",
       "projectName": "INTERFACES",
-      "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\INTERFACES.csproj",
+      "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\INTERFACES.csproj",
       "packagesPath": "C:\\Users\\Camil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\obj\\",
+      "outputPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Camil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6791,17 +6796,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\DTOs.csproj": {
-              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\DTOs.csproj"
+            "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\DTOs.csproj": {
+              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\DTOs.csproj"
             },
-            "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\MODELS.csproj": {
-              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\MODELS.csproj"
+            "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\MODELS.csproj": {
+              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\MODELS.csproj"
             }
           }
         }
@@ -6888,7 +6894,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n1xO5GH6DZwU6LDRVkbdcRSzY7joEJr4Ev8BK7x9CIMx9t8UK/U0HgRBw/HUDx8gLAspMswHq8kxdjYvHFA5Sw==",
+  "dgSpecHash": "faMF1U5dJwI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\FileStorage.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\FileStorage.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Camil\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Camil\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

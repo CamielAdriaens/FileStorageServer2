@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YYgiD4maKJ1mmjUtI+saamIq2ruDZl+noKrsKtv/Hj0JJK71c++zOoNslVMESQ2ERsgQCD/0wEh15jZBJINL0A==",
+  "dgSpecHash": "r7i2Mxgm1jk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\MODELS.csproj",
+  "projectFilePath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\MODELS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Camil\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Camil\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
