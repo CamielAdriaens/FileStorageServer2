@@ -7,7 +7,6 @@ COPY . /source
 
 WORKDIR /source/FileStorage
 
-RUN apk add --no-cache icu-libs bash
 RUN dotnet build -c Release -o /app/build
 
 
@@ -19,6 +18,7 @@ RUN dotnet publish -c Release -o /app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS final
 WORKDIR /app
 COPY --from=publish /app/publish . 
+RUN apk add --no-cache icu-libs bash
 
 ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
 ENV ASPNETCORE_URLS=http://0.0.0.0:8080
