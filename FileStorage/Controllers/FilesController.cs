@@ -115,7 +115,7 @@ namespace FileStorage.Controllers
             await _fileService.DeleteFileAsync(objectId);
             await _userService.RemoveUserFileAsync(googleId, id);
 
-            return NoContent();
+            return Ok("File Deleted Succesfully");
         }
         [HttpGet("pending-shares")]
         public async Task<IActionResult> GetPendingShares()
