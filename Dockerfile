@@ -7,6 +7,7 @@ COPY . /source
 
 WORKDIR /source/FileStorage
 
+RUN apk add --no-cache icu-libs bash
 RUN dotnet build -c Release -o /app/build
 
 
