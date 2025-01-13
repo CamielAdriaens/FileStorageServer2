@@ -19,7 +19,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS final
 WORKDIR /app
 COPY --from=publish /app/publish . 
 
-
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
 ENV ASPNETCORE_URLS=http://0.0.0.0:8080
 
 # Use ENTRYPOINT to run the application when the container starts
