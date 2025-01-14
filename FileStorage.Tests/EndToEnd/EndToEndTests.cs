@@ -12,6 +12,7 @@ using FileStorage.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using DTOs;
+using Microsoft.AspNetCore.SignalR;
 
 namespace FileStorage.Tests
 {
@@ -21,8 +22,8 @@ namespace FileStorage.Tests
         private readonly Mock<IFileService> _mockFileService;
         private readonly Mock<IFileRepository> _mockFileRepository;
         private readonly FilesController _controller;
-        private readonly Mock<IUserRepository> _mockUserRepository = new Mock<IUserRepository>();
-
+        private readonly Mock<IUserRepository> _mockUserRepository;
+        private readonly Mock<IHubContext<FileSharingHub>> _mockHubContext;  // Mock IHubContext
 
         public EndToEndTests()
         {
@@ -30,7 +31,8 @@ namespace FileStorage.Tests
             _mockFileService = new Mock<IFileService>();
             _mockFileRepository = new Mock<IFileRepository>();
             _mockUserRepository = new Mock<IUserRepository>();
-            _controller = new FilesController(_mockFileService.Object, _mockUserService.Object);
+            _mockHubContext = new Mock<IHubContext<FileSharingHub>>();  // Initialize the mock HubContext
+            _controller = new FilesController(_mockFileService.Object, _mockUserService.Object, _mockHubContext.Object);  // Pass it into the controller
         }
 
         [Fact]
