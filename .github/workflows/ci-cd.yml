@@ -22,6 +22,7 @@ jobs:
           --health-retries=5 
           -e GITHUB_ACTIONS=true 
           -e CI=true
+
     steps:
       # Step 1: Checkout Code
       - name: Checkout Code
@@ -52,13 +53,14 @@ jobs:
             /p:CoverletOutput=TestResults/coverage/ \
             /p:CoverletOutputFormat=cobertura \
             --verbosity normal
-        continue-on-error: true  # Ensure tests don't block subsequent steps
+        continue-on-error: true  # Continue regardless of test failures or warnings
 
       # Step 6: Install SonarQube Cloud Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
+
       # Step 7: SonarQube Analysis (with coverage report directly sent to SonarCloud)
       - name: Run SonarQube analysis
         env:
@@ -77,7 +79,7 @@ jobs:
           # Complete the SonarQube analysis
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-      
+
       # Step 8: Check Docker Version
       - name: Check Docker Version
         run: docker --version
