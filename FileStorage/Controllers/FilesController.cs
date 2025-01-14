@@ -8,6 +8,7 @@ using System;
 using INTERFACES;
 using MODELS;
 using DTOs;
+using Microsoft.AspNetCore.SignalR;
 
 namespace FileStorage.Controllers
 {
@@ -18,11 +19,13 @@ namespace FileStorage.Controllers
     {
         private readonly IFileService _fileService;
         private readonly IUserService _userService;
+        private readonly IHubContext<FileSharingHub> _hubContext; // Inject the HubContext
 
-        public FilesController(IFileService fileService, IUserService userService)
+        public FilesController(IFileService fileService, IUserService userService, IHubContext<FileSharingHub> hubContext)
         {
             _fileService = fileService;
             _userService = userService;
+            _hubContext = hubContext;
         }
 
         [HttpGet("secure-files")]
@@ -69,6 +72,9 @@ namespace FileStorage.Controllers
             var mongoFileId = await _fileService.UploadFileAsync(stream, file.FileName);
 
             await _userService.AddUserFileAsync(googleId, mongoFileId.ToString(), file.FileName);
+
+            // Notify all connected clients about the new file upload
+            await _hubContext.Clients.All.SendAsync("ReceiveMessage", $"File uploaded: {file.FileName}");
 
             return Ok(new { FileId = mongoFileId.ToString() });
         }
@@ -157,6 +163,10 @@ namespace FileStorage.Controllers
             try
             {
                 await _userService.ShareFileAsync(googleId, request.RecipientEmail, request.FileName, request.MongoFileId);
+
+                // Notify all connected clients about the file sharing event
+                await _hubContext.Clients.All.SendAsync("ReceiveMessage", $"File shared: {request.FileName} with {request.RecipientEmail}");
+
                 return Ok("File shared successfully.");
             }
             catch (Exception ex)
@@ -164,7 +174,6 @@ namespace FileStorage.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
         [HttpPost("accept-share/{shareId}")]
         public async Task<IActionResult> AcceptShare(int shareId)
         {

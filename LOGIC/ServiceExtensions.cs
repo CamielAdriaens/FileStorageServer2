@@ -18,5 +18,7 @@ public static class ServiceExtensions
         services.AddScoped<IFileService, FileService>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IWebSocketService, WebSocketService>();
+
     }
 }
