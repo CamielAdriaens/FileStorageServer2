@@ -12,10 +12,9 @@ using DTOs;
 using FileStorage.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using LOGIC;
-using FileStorage;
 using Microsoft.AspNetCore.SignalR;
 
-namespace FileStorage.Tests
+namespace FileStorage.Tests.AlternativeFlows
 {
     public class AlternativeFlowsErrorHandling
     {
@@ -24,7 +23,7 @@ namespace FileStorage.Tests
         private readonly Mock<IFileRepository> _mockFileRepository;
         private readonly FilesController _controller;
         private readonly Mock<IUserRepository> _mockUserRepository;
-        private readonly Mock<IHubContext<FileSharingHub>> _mockHubContext; 
+        private readonly Mock<IHubContext<FileSharingHub>> _mockHubContext;
         public AlternativeFlowsErrorHandling()
         {
             _mockUserService = new Mock<IUserService>();
@@ -32,7 +31,7 @@ namespace FileStorage.Tests
             _mockFileRepository = new Mock<IFileRepository>();
             _mockUserRepository = new Mock<IUserRepository>();
             _mockHubContext = new Mock<IHubContext<FileSharingHub>>();  // Initialize the mock HubContext
-            _controller = new FilesController(_mockFileService.Object, _mockUserService.Object, _mockHubContext.Object); 
+            _controller = new FilesController(_mockFileService.Object, _mockUserService.Object, _mockHubContext.Object);
         }
 
         //For file sharing we use getuserbyemail
@@ -70,18 +69,18 @@ namespace FileStorage.Tests
         {
             var googleId = "google123";
             _mockUserRepository.Setup(repo => repo.GetUserByGoogleId(googleId))
-                .ThrowsAsync(new System.Exception("Database error"));
+                .ThrowsAsync(new Exception("Database error"));
 
-            await Assert.ThrowsAsync<System.Exception>(() => _mockUserRepository.Object.GetUserByGoogleId(googleId));
+            await Assert.ThrowsAsync<Exception>(() => _mockUserRepository.Object.GetUserByGoogleId(googleId));
         }
         [Fact]
         public async Task GetUserByEmail_ShouldThrowException_WhenRepositoryFails()
         {
             var email = "test@example.com";
             _mockUserRepository.Setup(repo => repo.GetUserByEmail(email))
-                .ThrowsAsync(new System.Exception("Database error"));
+                .ThrowsAsync(new Exception("Database error"));
 
-            await Assert.ThrowsAsync<System.Exception>(() => _mockUserRepository.Object.GetUserByEmail(email));
+            await Assert.ThrowsAsync<Exception>(() => _mockUserRepository.Object.GetUserByEmail(email));
         }
 
 
@@ -134,7 +133,7 @@ namespace FileStorage.Tests
             Assert.IsType<BadRequestObjectResult>(result);
         }
 
-       
-   
+
+
     }
 }

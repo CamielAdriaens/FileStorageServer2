@@ -2,7 +2,7 @@
 using INTERFACES;
 using System.Threading.Tasks;
 
-namespace YourNamespace.Controllers
+namespace FileStorage.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,10 +1,4 @@
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_FileStorage.Tests
-C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.csproj.AssemblyReference.cache
-C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.AssemblyInfoInputs.cache
-C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.AssemblyInfo.cs
-C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.csproj.CoreCompileInputs.cache
-C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.sourcelink.json
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\bin\Debug\net8.0\testhost.dll
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\bin\Debug\net8.0\FileStorage.deps.json
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\bin\Debug\net8.0\FileStorage.runtimeconfig.json
@@ -279,6 +273,12 @@ C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\bin\Debug\n
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\bin\Debug\net8.0\INTERFACES.pdb
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\bin\Debug\net8.0\LOGIC.pdb
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\bin\Debug\net8.0\MODELS.pdb
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.csproj.AssemblyReference.cache
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.AssemblyInfoInputs.cache
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.AssemblyInfo.cs
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.sourcelink.json
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStor.E6F090C5.Up2Date
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\FileStorage.Tests.dll
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\FileStorage.Tests\obj\Debug\net8.0\refint\FileStorage.Tests.dll
