@@ -28,13 +28,10 @@ namespace FileStorage.Tests.IntegrationTests
         [Fact]
         public async Task CreateUser_ShouldAddUserToDatabase()
         {
-            // Arrange
             var user = new User { GoogleId = "google-id", Email = "test@example.com", Name = "Test User" };
 
-            // Act
             var result = await _userRepository.CreateUser(user);
 
-            // Assert
             var retrievedUser = await _context.Users.FindAsync(result.UserId);
             Assert.Equal("google-id", retrievedUser.GoogleId);
         }
@@ -42,15 +39,12 @@ namespace FileStorage.Tests.IntegrationTests
         [Fact]
         public async Task GetUserByGoogleId_ShouldReturnUser()
         {
-            // Arrange
             var user = new User { GoogleId = "google-id", Email = "test@example.com", Name = "Test User" };
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            // Act
             var result = await _userRepository.GetUserByGoogleId("google-id");
 
-            // Assert
             Assert.Equal(user, result);
         }
 

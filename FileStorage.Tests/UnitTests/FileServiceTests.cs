@@ -26,45 +26,36 @@ namespace FileStorage.Tests.UnitTests
         [Fact]
         public async Task UploadFileAsync_ShouldReturnObjectId()
         {
-            // Arrange
             var fileName = "file.txt";
             var stream = new MemoryStream();
             var expectedId = MongoDB.Bson.ObjectId.GenerateNewId();
             _fileRepositoryMock.Setup(repo => repo.UploadFileAsync(stream, fileName)).ReturnsAsync(expectedId);
 
-            // Act
             var result = await _fileService.UploadFileAsync(stream, fileName);
 
-            // Assert
             Assert.Equal(expectedId, result);
         }
 
         [Fact]
         public async Task DownloadFileAsync_ShouldReturnStream()
         {
-            // Arrange
             var fileId = MongoDB.Bson.ObjectId.GenerateNewId();
             var expectedStream = new MemoryStream();
             _fileRepositoryMock.Setup(repo => repo.DownloadFileAsync(fileId)).ReturnsAsync(expectedStream);
 
-            // Act
             var result = await _fileService.DownloadFileAsync(fileId);
 
-            // Assert
             Assert.Equal(expectedStream, result);
         }
 
         [Fact]
         public async Task DeleteFileAsync_ShouldInvokeRepositoryMethod()
         {
-            // Arrange
             var fileId = MongoDB.Bson.ObjectId.GenerateNewId();
             _fileRepositoryMock.Setup(repo => repo.DeleteFileAsync(fileId)).Returns(Task.CompletedTask);
 
-            // Act
             await _fileService.DeleteFileAsync(fileId);
 
-            // Assert
             _fileRepositoryMock.Verify(repo => repo.DeleteFileAsync(fileId), Times.Once);
         }
     }
