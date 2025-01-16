@@ -1,8 +1,9 @@
 ﻿using MODELS;
 using Microsoft.EntityFrameworkCore;
-using INTERFACES; // For repository interfaces
-
+using INTERFACES;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DAL
@@ -13,46 +14,40 @@ namespace DAL
 
         public UserRepository(AppDbContext context)
         {
-            _context = context;
-        }
-        public async Task<User> GetUserByUserId(int userId)
-        {
-            return await _context.Users
-                .Include(u => u.UserFiles) // Include related UserFiles if needed
-                .FirstOrDefaultAsync(u => u.UserId == userId);
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<User> GetUserByGoogleId(string googleId)
-        {
-            return await _context.Users
+        public async Task<User> GetUserByUserId(int userId) =>
+            await _context.Users
+                .Include(u => u.UserFiles)
+                .FirstOrDefaultAsync(u => u.UserId == userId);
+
+        public async Task<User> GetUserByGoogleId(string googleId) =>
+            await _context.Users
                 .Include(u => u.UserFiles)
                 .FirstOrDefaultAsync(u => u.GoogleId == googleId);
-        }
-        public async Task<UserFile> GetFileByMongoFileId(string mongoFileId)
-        {
-            return await _context.UserFiles
-                .FirstOrDefaultAsync(file => file.MongoFileId == mongoFileId);
-        }
+
+        public async Task<User> GetUserByEmail(string email) =>
+            await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+
+        public async Task<UserFile> GetFileByMongoFileId(string mongoFileId) =>
+            await _context.UserFiles.FirstOrDefaultAsync(f => f.MongoFileId == mongoFileId);
 
         public async Task<User> CreateUser(User user)
         {
-            try
-            {
-                Console.WriteLine("Attempting to add user to database...");
-                _context.Users.Add(user);
-                await _context.SaveChangesAsync();
-                Console.WriteLine($"User with Google ID {user.GoogleId} saved to database with ID {user.UserId}.");
-                return user;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error saving user to database: {ex.Message}");
-                throw;
-            }
+            if (user == null)
+                throw new ArgumentNullException(nameof(user));
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+            return user;
         }
 
         public async Task AddUserFile(UserFile file)
         {
+            if (file == null)
+                throw new ArgumentNullException(nameof(file));
+
             _context.UserFiles.Add(file);
             await _context.SaveChangesAsync();
         }
@@ -77,54 +72,50 @@ namespace DAL
                 await _context.SaveChangesAsync();
             }
         }
-        public async Task<User> GetUserByEmail(string email)
-        {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
-        }
-
-        public async Task AddFileShare(PendingFileShare shareRequest)
-        {
-            _context.PendingFileShares.Add(shareRequest);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task<PendingFileShare> GetFileShareById(int shareId)
-        {
-            return await _context.PendingFileShares
-                .Include(s => s.File)
-                .FirstOrDefaultAsync(s => s.ShareId == shareId);
-        }
-
         public async Task AcceptFileShare(PendingFileShare shareRequest)
         {
             shareRequest.IsAccepted = true;
             await _context.SaveChangesAsync();
         }
-        public async Task RemoveFileShareAsync(PendingFileShare share)
+        public async Task AddFileShare(PendingFileShare shareRequest)
         {
-            _context.PendingFileShares.Remove(share);
+            if (shareRequest == null)
+                throw new ArgumentNullException(nameof(shareRequest));
+
+            _context.PendingFileShares.Add(shareRequest);
             await _context.SaveChangesAsync();
         }
-        public async Task<List<PendingFileShare>> GetPendingFileSharesForUserAsync(int userId)
-        {
-            return await _context.PendingFileShares
-                .Where(s => s.RecipientUserId == userId && s.IsAccepted == false)
+
+        public async Task<PendingFileShare> GetFileShareById(int shareId) =>
+            await _context.PendingFileShares
+                .Include(s => s.File)
+                .FirstOrDefaultAsync(s => s.ShareId == shareId);
+
+        public async Task<PendingFileShare> GetFileShareById(string fileId) =>
+            await _context.PendingFileShares
+                .FirstOrDefaultAsync(s => s.MongoFileId == fileId);
+
+        public async Task<List<PendingFileShare>> GetPendingFileSharesForUserAsync(int userId) =>
+            await _context.PendingFileShares
+                .Where(s => s.RecipientUserId == userId && !s.IsAccepted)
                 .ToListAsync();
-        }
-        public async Task<PendingFileShare> GetFileShareById(string fileId)
-        {
-            return await _context.PendingFileShares
-                                 .Where(share => share.MongoFileId == fileId)
-                                 .FirstOrDefaultAsync();
-        }
+
         public async Task UpdateFileShare(PendingFileShare shareRequest)
         {
+            if (shareRequest == null)
+                throw new ArgumentNullException(nameof(shareRequest));
+
             _context.PendingFileShares.Update(shareRequest);
             await _context.SaveChangesAsync();
         }
 
+        public async Task RemoveFileShareAsync(PendingFileShare share)
+        {
+            if (share == null)
+                throw new ArgumentNullException(nameof(share));
 
-
-
+            _context.PendingFileShares.Remove(share);
+            await _context.SaveChangesAsync();
+        }
     }
 }

@@ -39,3 +39,4 @@ C:\Users\Camil\Documents\GitHub\FileStorageServer2\DAL\obj\Debug\net8.0\refint\D
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\DAL\obj\Debug\net8.0\DAL.pdb
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\DAL\obj\Debug\net8.0\ref\DAL.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\DAL\bin\Debug\net8.0\CoverletSourceRootsMapping_DAL

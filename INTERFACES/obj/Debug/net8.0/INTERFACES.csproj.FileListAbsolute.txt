@@ -35,3 +35,4 @@ C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\obj\Debug\net8.0\r
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\obj\Debug\net8.0\INTERFACES.pdb
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\obj\Debug\net8.0\INTERFACES.genruntimeconfig.cache
 C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\obj\Debug\net8.0\ref\INTERFACES.dll
+C:\Users\Camil\Documents\GitHub\FileStorageServer2\INTERFACES\bin\Debug\net8.0\CoverletSourceRootsMapping_INTERFACES
