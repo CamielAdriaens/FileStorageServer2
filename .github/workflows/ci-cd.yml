@@ -41,7 +41,7 @@ jobs:
       - name: Build the solution
         run: dotnet build FileStorage.sln --configuration Release
 
-    # Step 5: Run Unit Tests with Code Coverage
+      # Step 5: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
         continue-on-error: true
         run: |
@@ -51,8 +51,11 @@ jobs:
             -reports:**/coverage.cobertura.xml \
             -targetdir:./coverage-report \
             -reporttypes:Html
+        env:
+          DOTNET_ROOT: /usr/share/dotnet
 
-      # Step 6: Install SonarQube Cloud Scanner if Not Cached
+
+     # Step 6: Install SonarQube Cloud Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
         run: |
           mkdir -p ./.sonar/scanner
@@ -75,7 +78,6 @@ jobs:
           # Complete the SonarQube analysis
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-
       # Step 8: Check Docker Version
       - name: Check Docker Version
         run: docker --version
@@ -103,12 +105,10 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t camieladriaen/filestorageserverapp:${{ github.sha }} .
-
       # Step 14: Tag Docker Image as Latest
       - name: Tag Docker Image as Latest
         run: |
           docker tag camieladriaen/filestorageserverapp:${{ github.sha }} camieladriaen/filestorageserverapp:latest
-
       # Step 15: Push Docker Image to Docker Hub
       - name: Push Docker Image to Docker Hub
         run: |
