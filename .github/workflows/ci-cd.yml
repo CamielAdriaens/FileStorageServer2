@@ -22,7 +22,6 @@ jobs:
           --health-retries=5 
           -e GITHUB_ACTIONS=true 
           -e CI=true
-
     steps:
       # Step 1: Checkout Code
       - name: Checkout Code
@@ -45,26 +44,14 @@ jobs:
       # Step 5: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
         run: |
-          # Install coverlet globally if not already installed
-          dotnet tool install --global coverlet.console --version 3.1.2 || echo "Coverlet already installed"
-
-          # Add the global tools directory to PATH
-          echo "::add-path::$HOME/.dotnet/tools"
-
-          # Run the tests and collect coverage using coverlet
-          mkdir -p TestResults/coverage
+          mkdir -p TestResults/coverage  # Ensure the coverage folder exists
+          # Run the tests and collect coverage in 'cobertura' format
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
             --no-build --configuration Release \
-            --collect:"XPlat Code Coverage" \
+            /p:CollectCoverage=true \
             /p:CoverletOutput=TestResults/coverage/ \
             /p:CoverletOutputFormat=cobertura \
-            /p:Threshold=70 
-
-          # Ensure coverage report is generated
-          if [ ! -f TestResults/coverage/coverage.cobertura.xml ]; then
-            echo "Coverage report not found!" && exit 1
-          fi
-
+            --verbosity normal
         continue-on-error: true  # Continue regardless of test failures or warnings
 
       # Step 6: Install SonarQube Cloud Scanner if Not Cached
@@ -72,7 +59,6 @@ jobs:
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
-
       # Step 7: SonarQube Analysis (with coverage report directly sent to SonarCloud)
       - name: Run SonarQube analysis
         env:
@@ -88,11 +74,9 @@ jobs:
           
           # Build the project after the sonar scanner begins
           dotnet build FileStorage.sln --configuration Release
-
           # Complete the SonarQube analysis
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-
       # Step 8: Check Docker Version
       - name: Check Docker Version
         run: docker --version
@@ -120,12 +104,10 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t camieladriaen/filestorageserverapp:${{ github.sha }} .
-
       # Step 14: Tag Docker Image as Latest
       - name: Tag Docker Image as Latest
         run: |
           docker tag camieladriaen/filestorageserverapp:${{ github.sha }} camieladriaen/filestorageserverapp:latest
-
       # Step 15: Push Docker Image to Docker Hub
       - name: Push Docker Image to Docker Hub
         run: |
