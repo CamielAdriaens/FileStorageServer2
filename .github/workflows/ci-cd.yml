@@ -44,21 +44,19 @@ jobs:
       # Step 5: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
         run: |
-          mkdir -p TestResults/coverage  # Ensure the coverage folder exists
-          # Run the tests and collect coverage in 'cobertura' format
-          dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
-            --no-build --configuration Release \
-            /p:CollectCoverage=true \
-            /p:CoverletOutput=TestResults/coverage/ \
-            /p:CoverletOutputFormat=cobertura \
-            --verbosity normal
-        continue-on-error: true  # Continue regardless of test failures or warnings
+          dotnet test FileStorage.sln --configuration Release --collect:"XPlat Code Coverage" \
+            --logger "trx;LogFileName=test_results.trx"
+          reportgenerator \
+            -reports:**/coverage.cobertura.xml \
+            -targetdir:./coverage-report \
+            -reporttypes:Html
 
       # Step 6: Install SonarQube Cloud Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
         run: |
           mkdir -p ./.sonar/scanner
           dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner
+
       # Step 7: SonarQube Analysis (with coverage report directly sent to SonarCloud)
       - name: Run SonarQube analysis
         env:
@@ -70,13 +68,13 @@ jobs:
             /o:"camieladriaens" \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" \
             /d:sonar.host.url="https://sonarcloud.io" \
-            /d:sonar.cs.cobertura.reportsPaths="TestResults/coverage/coverage.cobertura.xml"
-          
+            /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
           # Build the project after the sonar scanner begins
           dotnet build FileStorage.sln --configuration Release
           # Complete the SonarQube analysis
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+
       # Step 8: Check Docker Version
       - name: Check Docker Version
         run: docker --version
@@ -104,10 +102,12 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t camieladriaen/filestorageserverapp:${{ github.sha }} .
+
       # Step 14: Tag Docker Image as Latest
       - name: Tag Docker Image as Latest
         run: |
           docker tag camieladriaen/filestorageserverapp:${{ github.sha }} camieladriaen/filestorageserverapp:latest
+
       # Step 15: Push Docker Image to Docker Hub
       - name: Push Docker Image to Docker Hub
         run: |
