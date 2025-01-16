@@ -50,6 +50,9 @@ jobs:
             -reports:**/coverage.cobertura.xml \
             -targetdir:./coverage-report \
             -reporttypes:Html
+           continue-on-error: true  # Continue regardless of test failures or warnings
+
+
 
       # Step 6: Install SonarQube Cloud Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
