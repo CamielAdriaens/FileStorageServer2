@@ -45,14 +45,26 @@ jobs:
       # Step 5: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
         run: |
-          mkdir -p TestResults/coverage  # Ensure the coverage folder exists
-          # Run the tests and collect coverage in 'cobertura' format
+          # Install coverlet globally if not already installed
+          dotnet tool install --global coverlet.console --version 3.1.2 || echo "Coverlet already installed"
+
+          # Add the global tools directory to PATH
+          echo "::add-path::$HOME/.dotnet/tools"
+
+          # Run the tests and collect coverage using coverlet
+          mkdir -p TestResults/coverage
           dotnet test FileStorage.Tests/FileStorage.Tests.csproj \
             --no-build --configuration Release \
-            /p:CollectCoverage=true \
+            --collect:"XPlat Code Coverage" \
             /p:CoverletOutput=TestResults/coverage/ \
             /p:CoverletOutputFormat=cobertura \
-            --verbosity normal
+            /p:Threshold=70 
+
+          # Ensure coverage report is generated
+          if [ ! -f TestResults/coverage/coverage.cobertura.xml ]; then
+            echo "Coverage report not found!" && exit 1
+          fi
+
         continue-on-error: true  # Continue regardless of test failures or warnings
 
       # Step 6: Install SonarQube Cloud Scanner if Not Cached
@@ -76,6 +88,7 @@ jobs:
           
           # Build the project after the sonar scanner begins
           dotnet build FileStorage.sln --configuration Release
+
           # Complete the SonarQube analysis
           ./.sonar/scanner/dotnet-sonarscanner end \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
