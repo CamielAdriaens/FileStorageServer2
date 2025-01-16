@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nA31ul5NyxU3G5BxWb9eXweqYSdX6ZN/EDV7N13spDYqCEr5zLLYXbsuhkLBLHFvLaUO7PvQR3dqUg/8MXqweg==",
+  "dgSpecHash": "jjF3gEMc3pgVC44JK2KCmC4Un+l7GwYKHH40tmjVl7E9p4xkZ/JCAl9gFhYpE3yrCeQEytUCOUn6LcpiznWdKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\INTERFACES.csproj",
+  "projectFilePath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\INTERFACES.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Camil\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Camil\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

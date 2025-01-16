@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\DTOs.csproj": {}
+    "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\DTOs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\DTOs.csproj": {
+    "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\DTOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\DTOs.csproj",
+        "projectUniqueName": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\DTOs.csproj",
         "projectName": "DTOs",
-        "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\DTOs.csproj",
+        "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\DTOs.csproj",
         "packagesPath": "C:\\Users\\Camil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\obj\\",
+        "outputPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Camil\\AppData\\Roaming\\NuGet\\NuGet.Config",

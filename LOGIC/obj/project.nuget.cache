@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GOH3CQ0FJ4ZBks0x2IcY3jLdlpTseYesVZpi9MhXvXYF3ZcjGVOv3SbIe1f8aIu49GD6FF2VK5KI7MD5PwZKHA==",
+  "dgSpecHash": "vUEd3MvQjTkZS4HRR9Yj/VUV5lUzG+RcHQc25IjVHorJqMI9Bo9vRhq7hXtgf//B5CGO4VTr2rBnlRGWXIfOfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\LOGIC.csproj",
+  "projectFilePath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\LOGIC\\LOGIC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Camil\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Camil\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
