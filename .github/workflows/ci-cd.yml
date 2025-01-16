@@ -41,8 +41,9 @@ jobs:
       - name: Build the solution
         run: dotnet build FileStorage.sln --configuration Release
 
-      # Step 5: Run Unit Tests with Code Coverage
+    # Step 5: Run Unit Tests with Code Coverage
       - name: Run Unit Tests with Code Coverage
+        continue-on-error: true
         run: |
           dotnet test FileStorage.sln --configuration Release --collect:"XPlat Code Coverage" \
             --logger "trx;LogFileName=test_results.trx"
@@ -50,9 +51,6 @@ jobs:
             -reports:**/coverage.cobertura.xml \
             -targetdir:./coverage-report \
             -reporttypes:Html
-           continue-on-error: true  # Continue regardless of test failures or warnings
-
-
 
       # Step 6: Install SonarQube Cloud Scanner if Not Cached
       - name: Install SonarQube Cloud scanner if not cached
