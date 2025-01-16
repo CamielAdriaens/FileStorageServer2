@@ -2383,7 +2383,10 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "DAL.dll": {}
+          "DAL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "DTOs/1.0.0": {
@@ -2401,7 +2404,10 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "DTOs.dll": {}
+          "DTOs.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "FileStorage/1.0.0": {
@@ -2426,7 +2432,10 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "FileStorage.dll": {}
+          "FileStorage.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "INTERFACES/1.0.0": {
@@ -2446,7 +2455,10 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "INTERFACES.dll": {}
+          "INTERFACES.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "LOGIC/1.0.0": {
@@ -2468,7 +2480,10 @@
           "System.Security.Claims": "4.3.0"
         },
         "runtime": {
-          "LOGIC.dll": {}
+          "LOGIC.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "MODELS/1.0.0": {
@@ -2476,7 +2491,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0"
         },
         "runtime": {
-          "MODELS.dll": {}
+          "MODELS.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
