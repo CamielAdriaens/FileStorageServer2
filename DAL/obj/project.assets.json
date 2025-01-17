@@ -7070,11 +7070,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\Camil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Camil\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7091,11 +7091,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\INTERFACES.csproj": {
-              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\INTERFACES.csproj"
+            "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\INTERFACES.csproj": {
+              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\INTERFACES.csproj"
             },
-            "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\MODELS.csproj": {
-              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\MODELS.csproj"
+            "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\MODELS.csproj": {
+              "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\MODELS.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\MODELS.csproj": {}
+    "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\MODELS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\MODELS.csproj": {
+    "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\MODELS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\MODELS.csproj",
+        "projectUniqueName": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\MODELS.csproj",
         "projectName": "MODELS",
-        "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\MODELS.csproj",
+        "projectPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\MODELS.csproj",
         "packagesPath": "C:\\Users\\Camil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\obj\\",
+        "outputPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Camil\\AppData\\Roaming\\NuGet\\NuGet.Config",

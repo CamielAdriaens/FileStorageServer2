@@ -1,181 +1,186 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\",
+  "WorkspaceRootPath": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\logic\\filesharinghub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\logic\\filesharinghub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|solutionrelative:logic\\filesharinghub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\filescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\filescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\filescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\securitytests\\authcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\securitytests\\authcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\securitytests\\authcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\unittests\\fileservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\unittests\\fileservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\unittests\\fileservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46425D0A-38F7-4401-AF1F-EC8E01F500C6}|MODELS\\MODELS.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\models\\userfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{46425D0A-38F7-4401-AF1F-EC8E01F500C6}|MODELS\\MODELS.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\models\\userfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46425D0A-38F7-4401-AF1F-EC8E01F500C6}|MODELS\\MODELS.csproj|solutionrelative:models\\userfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\logic\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\logic\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|solutionrelative:logic\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\interfaces\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\interfaces\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|solutionrelative:interfaces\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\logic\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\logic\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|solutionrelative:logic\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\unittests\\userservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\unittests\\userservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\unittests\\userservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\dal\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\dal\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|solutionrelative:dal\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\websocketservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\websocketservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\websocketservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\filesharinghubtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\filesharinghubtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\filesharinghubtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\logic\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\logic\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|solutionrelative:logic\\websocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\logic\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\logic\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6244DAC-91EE-4E24-A8F4-52B917BB9411}|LOGIC\\LOGIC.csproj|solutionrelative:logic\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\dal\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\dal\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|solutionrelative:dal\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\mongodbcontexttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\mongodbcontexttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\mongodbcontexttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\integrationtests\\filerepositoryintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\integrationtests\\filerepositoryintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\integrationtests\\filerepositoryintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\dal\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\dal\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|solutionrelative:dal\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\integrationtests\\userrepositoryintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\integrationtests\\userrepositoryintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\integrationtests\\userrepositoryintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|solutionrelative:interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\securitytests\\securitytesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\securitytests\\securitytesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\securitytests\\securitytesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\validationtests\\validationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\validationtests\\validationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\validationtests\\validationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46425D0A-38F7-4401-AF1F-EC8E01F500C6}|MODELS\\MODELS.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{46425D0A-38F7-4401-AF1F-EC8E01F500C6}|MODELS\\MODELS.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46425D0A-38F7-4401-AF1F-EC8E01F500C6}|MODELS\\MODELS.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|solutionrelative:interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage.tests\\alternativeflows\\alternativeflowserrorhandling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage.tests\\alternativeflows\\alternativeflowserrorhandling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DF1CF67-21A4-443C-9E12-6A868767E6D9}|FileStorage.Tests\\FileStorage.Tests.csproj|solutionrelative:filestorage.tests\\alternativeflows\\alternativeflowserrorhandling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\interfaces\\ifilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\interfaces\\ifilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|solutionrelative:interfaces\\ifilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\FileStorage.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\FileStorage.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FileStorage\\FileStorage.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\interfaces\\iwebsocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\interfaces\\iwebsocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7CF983F-1C65-4B4A-9898-9B55E3C5D52F}|INTERFACES\\INTERFACES.csproj|solutionrelative:interfaces\\iwebsocketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46425D0A-38F7-4401-AF1F-EC8E01F500C6}|MODELS\\MODELS.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\models\\pendingfileshare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{46425D0A-38F7-4401-AF1F-EC8E01F500C6}|MODELS\\MODELS.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\models\\pendingfileshare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46425D0A-38F7-4401-AF1F-EC8E01F500C6}|MODELS\\MODELS.csproj|solutionrelative:models\\pendingfileshare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\dal\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\dal\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|solutionrelative:dal\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3E43159-A12C-4D95-92E1-CD0BA57CFDDC}|DAL\\DAL.csproj|solutionrelative:dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\filestorage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\filestorage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D12612EA-A80D-4EC6-82B9-75873D15754E}|FileStorage\\FileStorage.csproj|solutionrelative:filestorage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FEEBACB-7C7B-491D-A3B2-7761A648C127}|DTOs\\DTOs.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\dtos\\userfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0FEEBACB-7C7B-491D-A3B2-7761A648C127}|DTOs\\DTOs.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\dtos\\userfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FEEBACB-7C7B-491D-A3B2-7761A648C127}|DTOs\\DTOs.csproj|solutionrelative:dtos\\userfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FEEBACB-7C7B-491D-A3B2-7761A648C127}|DTOs\\DTOs.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\dtos\\sharefilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0FEEBACB-7C7B-491D-A3B2-7761A648C127}|DTOs\\DTOs.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\dtos\\sharefilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FEEBACB-7C7B-491D-A3B2-7761A648C127}|DTOs\\DTOs.csproj|solutionrelative:dtos\\sharefilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217214250_fileid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217214250_fileid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20241217214250_fileid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217205157_AddPendingFileShares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217205157_AddPendingFileShares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20241217205157_AddPendingFileShares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FEEBACB-7C7B-491D-A3B2-7761A648C127}|DTOs\\DTOs.csproj|c:\\users\\camil\\documents\\github\\dockertestfilestorage\\filestorageserver2\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0FEEBACB-7C7B-491D-A3B2-7761A648C127}|DTOs\\DTOs.csproj|c:\\users\\camil\\documents\\github\\filestorageserver2\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FEEBACB-7C7B-491D-A3B2-7761A648C127}|DTOs\\DTOs.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217203634_AddPendingFileShares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217203634_AddPendingFileShares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20241217203634_AddPendingFileShares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217214352_AddPendingFileShares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217214352_AddPendingFileShares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20241217214352_AddPendingFileShares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241121195457_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241121195457_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Migrations\\20241121195457_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -191,9 +196,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\LOGIC\\UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\UserService.cs",
               "RelativeDocumentMoniker": "LOGIC\\UserService.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\LOGIC\\UserService.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\UserService.cs",
               "RelativeToolTip": "LOGIC\\UserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAKoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -203,9 +208,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "FileStorage\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Controllers\\AuthController.cs",
               "RelativeToolTip": "FileStorage\\Controllers\\AuthController.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAAAFwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -215,9 +220,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "UserServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\UnitTests\\UserServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\UnitTests\\UserServiceTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\UnitTests\\UserServiceTests.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\UnitTests\\UserServiceTests.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\UnitTests\\UserServiceTests.cs",
               "RelativeToolTip": "FileStorage.Tests\\UnitTests\\UserServiceTests.cs",
               "ViewState": "AQIAAJEAAAAAAAAAAAAgwNIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -227,9 +232,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\UserRepository.cs",
               "RelativeDocumentMoniker": "DAL\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\UserRepository.cs",
               "RelativeToolTip": "DAL\\UserRepository.cs",
               "ViewState": "AQIAADgAAAAAAAAAAAAAwG0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -239,9 +244,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "FileService.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\LOGIC\\FileService.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\FileService.cs",
               "RelativeDocumentMoniker": "LOGIC\\FileService.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\LOGIC\\FileService.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\FileService.cs",
               "RelativeToolTip": "LOGIC\\FileService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -251,22 +256,21 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "FilesController.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\Controllers\\FilesController.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Controllers\\FilesController.cs",
               "RelativeDocumentMoniker": "FileStorage\\Controllers\\FilesController.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\Controllers\\FilesController.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Controllers\\FilesController.cs",
               "RelativeToolTip": "FileStorage\\Controllers\\FilesController.cs",
               "ViewState": "AQIAAIEAAAAAAAAAAAAqwM8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:40:49.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T20:40:49.455Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "IFileService.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\IFileService.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\IFileService.cs",
               "RelativeDocumentMoniker": "INTERFACES\\IFileService.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\IFileService.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\IFileService.cs",
               "RelativeToolTip": "INTERFACES\\IFileService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -276,9 +280,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "FileServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\UnitTests\\FileServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\UnitTests\\FileServiceTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\UnitTests\\FileServiceTests.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\UnitTests\\FileServiceTests.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\UnitTests\\FileServiceTests.cs",
               "RelativeToolTip": "FileStorage.Tests\\UnitTests\\FileServiceTests.cs",
               "ViewState": "AQIAADoAAAAAAAAAAAAzwGEAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -288,9 +292,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "UserFile.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\UserFile.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\UserFile.cs",
               "RelativeDocumentMoniker": "MODELS\\UserFile.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\UserFile.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\UserFile.cs",
               "RelativeToolTip": "MODELS\\UserFile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -300,9 +304,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "AuthControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\SecurityTests\\AuthControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\SecurityTests\\AuthControllerTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\SecurityTests\\AuthControllerTests.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\SecurityTests\\AuthControllerTests.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\SecurityTests\\AuthControllerTests.cs",
               "RelativeToolTip": "FileStorage.Tests\\SecurityTests\\AuthControllerTests.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -312,22 +316,21 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "FilesControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\FilesControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\FilesControllerTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\FilesControllerTests.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\FilesControllerTests.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\FilesControllerTests.cs",
               "RelativeToolTip": "FileStorage.Tests\\FilesControllerTests.cs",
               "ViewState": "AQIAAIEAAAAAAAAAAAAgwMQAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T16:37:37.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T16:37:37.153Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "FileSharingHubTests.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\FileSharingHubTests.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\FileSharingHubTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\FileSharingHubTests.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\FileSharingHubTests.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\FileSharingHubTests.cs",
               "RelativeToolTip": "FileStorage.Tests\\FileSharingHubTests.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -337,9 +340,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "FileSharingHub.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\LOGIC\\FileSharingHub.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\FileSharingHub.cs",
               "RelativeDocumentMoniker": "LOGIC\\FileSharingHub.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\LOGIC\\FileSharingHub.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\FileSharingHub.cs",
               "RelativeToolTip": "LOGIC\\FileSharingHub.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -350,22 +353,21 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "MessageController.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\Controllers\\MessageController.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Controllers\\MessageController.cs",
               "RelativeDocumentMoniker": "FileStorage\\Controllers\\MessageController.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\Controllers\\MessageController.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Controllers\\MessageController.cs",
               "RelativeToolTip": "FileStorage\\Controllers\\MessageController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T18:03:55.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T18:03:55.895Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "WebSocketServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\WebSocketServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\WebSocketServiceTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\WebSocketServiceTests.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\WebSocketServiceTests.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\WebSocketServiceTests.cs",
               "RelativeToolTip": "FileStorage.Tests\\WebSocketServiceTests.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -375,9 +377,9 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "MongoDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\MongoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\MongoDbContext.cs",
               "RelativeDocumentMoniker": "DAL\\MongoDbContext.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\MongoDbContext.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\MongoDbContext.cs",
               "RelativeToolTip": "DAL\\MongoDbContext.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAmwEMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -387,9 +389,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "MongoDbContextTests.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\MongoDbContextTests.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\MongoDbContextTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\MongoDbContextTests.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\MongoDbContextTests.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\MongoDbContextTests.cs",
               "RelativeToolTip": "FileStorage.Tests\\MongoDbContextTests.cs",
               "ViewState": "AQIAAFgAAAAAAAAAAAAIwKcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -399,9 +401,9 @@
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "FileRepositoryIntegrationTests.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\FileRepositoryIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\FileRepositoryIntegrationTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\IntegrationTests\\FileRepositoryIntegrationTests.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\FileRepositoryIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\FileRepositoryIntegrationTests.cs",
               "RelativeToolTip": "FileStorage.Tests\\IntegrationTests\\FileRepositoryIntegrationTests.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAqwF4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -411,9 +413,9 @@
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "FileRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\FileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\FileRepository.cs",
               "RelativeDocumentMoniker": "DAL\\FileRepository.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\FileRepository.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\FileRepository.cs",
               "RelativeToolTip": "DAL\\FileRepository.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -423,9 +425,9 @@
               "$type": "Document",
               "DocumentIndex": 29,
               "Title": "IFileRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\IFileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\IFileRepository.cs",
               "RelativeDocumentMoniker": "INTERFACES\\IFileRepository.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\IFileRepository.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\IFileRepository.cs",
               "RelativeToolTip": "INTERFACES\\IFileRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -435,9 +437,9 @@
               "$type": "Document",
               "DocumentIndex": 30,
               "Title": "FileStorage.csproj.user",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\FileStorage.csproj.user",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\FileStorage.csproj.user",
               "RelativeDocumentMoniker": "FileStorage\\FileStorage.csproj.user",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\FileStorage.csproj.user",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\FileStorage.csproj.user",
               "RelativeToolTip": "FileStorage\\FileStorage.csproj.user",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
@@ -447,9 +449,9 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "ServiceExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\LOGIC\\ServiceExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\ServiceExtensions.cs",
               "RelativeDocumentMoniker": "LOGIC\\ServiceExtensions.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\LOGIC\\ServiceExtensions.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\ServiceExtensions.cs",
               "RelativeToolTip": "LOGIC\\ServiceExtensions.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -459,9 +461,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "WebSocketService.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\LOGIC\\WebSocketService.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\WebSocketService.cs",
               "RelativeDocumentMoniker": "LOGIC\\WebSocketService.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\LOGIC\\WebSocketService.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\LOGIC\\WebSocketService.cs",
               "RelativeToolTip": "LOGIC\\WebSocketService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -471,9 +473,9 @@
               "$type": "Document",
               "DocumentIndex": 27,
               "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\IUserService.cs",
               "RelativeDocumentMoniker": "INTERFACES\\IUserService.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\IUserService.cs",
               "RelativeToolTip": "INTERFACES\\IUserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -483,9 +485,9 @@
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\IUserRepository.cs",
               "RelativeDocumentMoniker": "INTERFACES\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\IUserRepository.cs",
               "RelativeToolTip": "INTERFACES\\IUserRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -495,9 +497,9 @@
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "UserRepositoryIntegrationTests.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
               "RelativeToolTip": "FileStorage.Tests\\IntegrationTests\\UserRepositoryIntegrationTests.cs",
               "ViewState": "AQIAAMIAAAAAAAAAAADwvwMBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -507,9 +509,9 @@
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "SecurityTesting.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\SecurityTests\\SecurityTesting.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\SecurityTests\\SecurityTesting.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\SecurityTests\\SecurityTesting.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\SecurityTests\\SecurityTesting.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\SecurityTests\\SecurityTesting.cs",
               "RelativeToolTip": "FileStorage.Tests\\SecurityTests\\SecurityTesting.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -519,9 +521,9 @@
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "ValidationTests.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\ValidationTests\\ValidationTests.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\ValidationTests\\ValidationTests.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\ValidationTests\\ValidationTests.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\ValidationTests\\ValidationTests.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\ValidationTests\\ValidationTests.cs",
               "RelativeToolTip": "FileStorage.Tests\\ValidationTests\\ValidationTests.cs",
               "ViewState": "AQIAAFgAAAAAAAAAAAAcwG0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -531,9 +533,9 @@
               "$type": "Document",
               "DocumentIndex": 25,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\User.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\User.cs",
               "RelativeDocumentMoniker": "MODELS\\User.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\User.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\User.cs",
               "RelativeToolTip": "MODELS\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -543,9 +545,9 @@
               "$type": "Document",
               "DocumentIndex": 28,
               "Title": "AlternativeFlowsErrorHandling.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\AlternativeFlows\\AlternativeFlowsErrorHandling.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\AlternativeFlows\\AlternativeFlowsErrorHandling.cs",
               "RelativeDocumentMoniker": "FileStorage.Tests\\AlternativeFlows\\AlternativeFlowsErrorHandling.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage.Tests\\AlternativeFlows\\AlternativeFlowsErrorHandling.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage.Tests\\AlternativeFlows\\AlternativeFlowsErrorHandling.cs",
               "RelativeToolTip": "FileStorage.Tests\\AlternativeFlows\\AlternativeFlowsErrorHandling.cs",
               "ViewState": "AQIAAE4AAAAAAAAAAAAgwCQAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -555,9 +557,9 @@
               "$type": "Document",
               "DocumentIndex": 26,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Program.cs",
               "RelativeDocumentMoniker": "FileStorage\\Program.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\Program.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Program.cs",
               "RelativeToolTip": "FileStorage\\Program.cs",
               "ViewState": "AQIAAEgAAAAAAAAAAADwv2cAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -567,9 +569,9 @@
               "$type": "Document",
               "DocumentIndex": 32,
               "Title": "PendingFileShare.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\PendingFileShare.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\PendingFileShare.cs",
               "RelativeDocumentMoniker": "MODELS\\PendingFileShare.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\MODELS\\PendingFileShare.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\MODELS\\PendingFileShare.cs",
               "RelativeToolTip": "MODELS\\PendingFileShare.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -579,9 +581,9 @@
               "$type": "Document",
               "DocumentIndex": 31,
               "Title": "IWebSocketService.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\IWebSocketService.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\IWebSocketService.cs",
               "RelativeDocumentMoniker": "INTERFACES\\IWebSocketService.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\INTERFACES\\IWebSocketService.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\INTERFACES\\IWebSocketService.cs",
               "RelativeToolTip": "INTERFACES\\IWebSocketService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -591,9 +593,9 @@
               "$type": "Document",
               "DocumentIndex": 34,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\AppDbContext.cs",
               "RelativeDocumentMoniker": "DAL\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\AppDbContext.cs",
               "RelativeToolTip": "DAL\\AppDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -603,9 +605,9 @@
               "$type": "Document",
               "DocumentIndex": 33,
               "Title": "MongoDbSettings.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\MongoDbSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\MongoDbSettings.cs",
               "RelativeDocumentMoniker": "DAL\\MongoDbSettings.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DAL\\MongoDbSettings.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\MongoDbSettings.cs",
               "RelativeToolTip": "DAL\\MongoDbSettings.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -615,9 +617,9 @@
               "$type": "Document",
               "DocumentIndex": 35,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "FileStorage\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\Properties\\launchSettings.json",
               "RelativeToolTip": "FileStorage\\Properties\\launchSettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -627,9 +629,9 @@
               "$type": "Document",
               "DocumentIndex": 36,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\appsettings.json",
               "RelativeDocumentMoniker": "FileStorage\\appsettings.json",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\FileStorage\\appsettings.json",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\FileStorage\\appsettings.json",
               "RelativeToolTip": "FileStorage\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -639,9 +641,9 @@
               "$type": "Document",
               "DocumentIndex": 37,
               "Title": "UserFileDto.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\UserFileDto.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\UserFileDto.cs",
               "RelativeDocumentMoniker": "DTOs\\UserFileDto.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\UserFileDto.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\UserFileDto.cs",
               "RelativeToolTip": "DTOs\\UserFileDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -651,9 +653,9 @@
               "$type": "Document",
               "DocumentIndex": 38,
               "Title": "ShareFileRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\ShareFileRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\ShareFileRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\ShareFileRequest.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\ShareFileRequest.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\ShareFileRequest.cs",
               "RelativeToolTip": "DTOs\\ShareFileRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -664,9 +666,9 @@
               "DocumentIndex": 40,
               "Title": "20241217205157_AddPendingFileShares.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217205157_AddPendingFileShares.cs",
-              "RelativeDocumentMoniker": "..\\..\\FileStorageServer2\\DAL\\Migrations\\20241217205157_AddPendingFileShares.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\20241217205157_AddPendingFileShares.cs",
               "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217205157_AddPendingFileShares.cs",
-              "RelativeToolTip": "..\\..\\FileStorageServer2\\DAL\\Migrations\\20241217205157_AddPendingFileShares.cs",
+              "RelativeToolTip": "DAL\\Migrations\\20241217205157_AddPendingFileShares.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T20:51:57.701Z"
             },
@@ -675,9 +677,9 @@
               "DocumentIndex": 39,
               "Title": "20241217214250_fileid.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217214250_fileid.cs",
-              "RelativeDocumentMoniker": "..\\..\\FileStorageServer2\\DAL\\Migrations\\20241217214250_fileid.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\20241217214250_fileid.cs",
               "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217214250_fileid.cs",
-              "RelativeToolTip": "..\\..\\FileStorageServer2\\DAL\\Migrations\\20241217214250_fileid.cs",
+              "RelativeToolTip": "DAL\\Migrations\\20241217214250_fileid.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T21:42:51.277Z"
             },
@@ -686,9 +688,9 @@
               "DocumentIndex": 43,
               "Title": "20241217214352_AddPendingFileShares.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217214352_AddPendingFileShares.cs",
-              "RelativeDocumentMoniker": "..\\..\\FileStorageServer2\\DAL\\Migrations\\20241217214352_AddPendingFileShares.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\20241217214352_AddPendingFileShares.cs",
               "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217214352_AddPendingFileShares.cs",
-              "RelativeToolTip": "..\\..\\FileStorageServer2\\DAL\\Migrations\\20241217214352_AddPendingFileShares.cs",
+              "RelativeToolTip": "DAL\\Migrations\\20241217214352_AddPendingFileShares.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T21:43:53.13Z"
             },
@@ -697,9 +699,9 @@
               "DocumentIndex": 44,
               "Title": "20241121195457_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241121195457_InitialCreate.cs",
-              "RelativeDocumentMoniker": "..\\..\\FileStorageServer2\\DAL\\Migrations\\20241121195457_InitialCreate.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\20241121195457_InitialCreate.cs",
               "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241121195457_InitialCreate.cs",
-              "RelativeToolTip": "..\\..\\FileStorageServer2\\DAL\\Migrations\\20241121195457_InitialCreate.cs",
+              "RelativeToolTip": "DAL\\Migrations\\20241121195457_InitialCreate.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T21:13:15.416Z"
             },
@@ -707,9 +709,9 @@
               "$type": "Document",
               "DocumentIndex": 41,
               "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\UserDto.cs",
               "RelativeDocumentMoniker": "DTOs\\UserDto.cs",
-              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\DockerTestFileStorage\\FileStorageServer2\\DTOs\\UserDto.cs",
+              "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DTOs\\UserDto.cs",
               "RelativeToolTip": "DTOs\\UserDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -720,9 +722,9 @@
               "DocumentIndex": 42,
               "Title": "20241217203634_AddPendingFileShares.cs",
               "DocumentMoniker": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217203634_AddPendingFileShares.cs",
-              "RelativeDocumentMoniker": "..\\..\\FileStorageServer2\\DAL\\Migrations\\20241217203634_AddPendingFileShares.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\20241217203634_AddPendingFileShares.cs",
               "ToolTip": "C:\\Users\\Camil\\Documents\\GitHub\\FileStorageServer2\\DAL\\Migrations\\20241217203634_AddPendingFileShares.cs",
-              "RelativeToolTip": "..\\..\\FileStorageServer2\\DAL\\Migrations\\20241217203634_AddPendingFileShares.cs",
+              "RelativeToolTip": "DAL\\Migrations\\20241217203634_AddPendingFileShares.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T20:36:34.189Z"
             }
